@@ -63,7 +63,8 @@ func movement(delta):
 	
 	
 	move_and_slide()
-	if jumped == true and is_on_floor():
-		player_sprite.play("Splat")
-		if player_sprite.frame == 3:
-			jumped = false
+	#AVY CAN YOU MAKE IT SO WHEN FALLING FROM A CERTAIN DISTANCE THE THING BELOW HAPPENs
+	#if jumped == true and is_on_floor():
+		#player_sprite.play("Splat")
+		#if player_sprite.frame == 3:
+			#jumped = false
