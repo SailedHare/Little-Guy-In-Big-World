@@ -137,10 +137,10 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 0.6,
+"duration": 0.4,
 "texture": SubResource("AtlasTexture_fd4e3")
 }, {
-"duration": 0.6,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_qqcod")
 }, {
 "duration": 0.6,
@@ -149,7 +149,7 @@ animations = [{
 "duration": 0.6,
 "texture": SubResource("AtlasTexture_fs7ks")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Splat",
 "speed": 5.0
 }, {
@@ -180,7 +180,9 @@ script = ExtResource("1_cvnsp")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="." unique_id=2004877861]
 sprite_frames = SubResource("SpriteFrames_u14ej")
-animation = &"Crouch"
+animation = &"Splat"
+frame = 3
+frame_progress = 1.0
 
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=1573654828]
 position = Vector2(0, -10)

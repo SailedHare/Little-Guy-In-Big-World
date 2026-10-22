@@ -8,12 +8,14 @@ const jump_velo_const = 100
 var facing = 1 #1 = right -1 = left
 var gravity = 1
 const gravity_const = 5
+var jumped = false
 
 @onready var player_sprite: AnimatedSprite2D = $PlayerSprite
 
 
 
 func _physics_process(delta: float) -> void:
+	print(jump_velocity)
 	movement(delta)
 	flipping()
 	if not is_on_floor():
@@ -21,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		gravity + 2 * delta
 	else: 
 		gravity = gravity_const
-		jump_velocity = jump_velo_const
+		
 
 func flipping():
 	if velocity.x < 0:
@@ -43,15 +45,25 @@ func movement(delta):
 		
 	if Input.is_action_just_released("jump") and is_on_floor():
 		velocity.y = -jump_velocity
+		jump_velocity = jump_velo_const
+		max_speed = 100
+		jumped = true
 		
 
 	if Input.is_action_pressed("jump"):
 		player_sprite.play("Crouch")
 		if jump_velocity < 150:
-			jump_velocity + 10 * delta
+			print("hi")
+			jump_velocity += 50 * delta
+		max_speed = 30
 	elif velocity.x != 0:
 		player_sprite.play("Walk")
-	else:
+	elif is_on_floor() and jumped == false:
 		player_sprite.play("Idle" )
 	
+	
 	move_and_slide()
+	if jumped == true and is_on_floor():
+		player_sprite.play("Splat")
+		if player_sprite.frame == 3:
+			jumped = false
