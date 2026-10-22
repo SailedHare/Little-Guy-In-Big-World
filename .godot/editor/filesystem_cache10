@@ -1,11 +1,12 @@
 78098b89c88a74ebe8c20117b8754620
 ::res://::1792703552
 icon.svg::CompressedTexture2D::2215899920417346810::1792699093::1792699454::1::::<><><>0<>0<>996bf6f93f6b45b444543f62499eb81b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Assets/::1792703348
-GrassTilemap.png::CompressedTexture2D::4977476968311901553::1792703348::1792703553::1::::<><><>0<>0<>47f68885d67b711a9e4a6eba0cbca4fd<>res://.godot/imported/GrassTilemap.png-e3578cf165757c64c2c6ebb61d2d040a.ctex::
+::res://Assets/::1792703553
+GrassTilemap.png::CompressedTexture2D::4977476968311901553::1792709484::1792709485::1::::<><><>0<>0<>47f68885d67b711a9e4a6eba0cbca4fd<>res://.godot/imported/GrassTilemap.png-e3578cf165757c64c2c6ebb61d2d040a.ctex::
 PlayerSpriteSheet.png::CompressedTexture2D::9003142314363111013::1792699521::1792699522::1::::<><><>0<>0<>8b8d56058d323c734ec8d38f4fe1dfeb<>res://.godot/imported/PlayerSpriteSheet.png-43f5010c586cd375297424f27287b64e.ctex::
-::res://Scenes/::1792701069
-main.tscn::PackedScene::5364967369444691601::1792701069::0::1::::<><><>0<>0<><>::uid://cs4remno7c8bn::::res://Scenes/player.tscn<>uid://6tnsvok7fxbu::::res://icon.svg
+::res://Scenes/::1792708927
+main.tscn::PackedScene::5364967369444691601::1792708927::0::1::::<><><>0<>0<><>::uid://cs4remno7c8bn::::res://Scenes/player.tscn<>uid://cyvoaxam1y27b::::res://Scenes/grass_tilemap.tscn
 player.gd::GDScript::3790276833712966608::1792701063::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene::6097147490832802627::1792700731::0::1::::<><><>0<>0<><>::uid://buabknmvx8sdk::::res://Scenes/player.gd<>uid://d1jgo57pqab5f::::res://Assets/PlayerSpriteSheet.png
+grass_tilemap.tscn::PackedScene::6501576794050963853::1792708927::0::1::::<><><>0<>0<><>::uid://cc6ek3elxdbs8::::res://Assets/GrassTilemap.png
 ::res://Scripts/::1792699238
