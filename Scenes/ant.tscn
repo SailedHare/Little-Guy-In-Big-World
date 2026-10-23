@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://b1qq6hisxa76g"]
+
+[ext_resource type="Script" uid="uid://7js5v2dco8gn" path="res://scripts/ant.gd" id="1_4ydk5"]
+[ext_resource type="Texture2D" uid="uid://e3yahirub4pr" path="res://Assets/Ant.png" id="2_fd48h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtaqj"]
+atlas = ExtResource("2_fd48h")
+region = Rect2(0, 48, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yntpf"]
+atlas = ExtResource("2_fd48h")
+region = Rect2(80, 48, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ae3vd"]
+atlas = ExtResource("2_fd48h")
+region = Rect2(160, 48, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3gn3"]
+atlas = ExtResource("2_fd48h")
+region = Rect2(240, 48, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00xey"]
+atlas = ExtResource("2_fd48h")
+region = Rect2(0, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6dov"]
+atlas = ExtResource("2_fd48h")
+region = Rect2(80, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_riijy"]
+atlas = ExtResource("2_fd48h")
+region = Rect2(160, 0, 80, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7xtn"]
+atlas = ExtResource("2_fd48h")
+region = Rect2(240, 0, 80, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u14ej"]
+animations = [{
+"frames": [{
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_wtaqj")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_yntpf")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_ae3vd")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_p3gn3")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_00xey")
+}, {
+"duration": 0.6,
+"texture": SubResource("AtlasTexture_f6dov")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_riijy")
+}, {
+"duration": 0.6,
+"texture": SubResource("AtlasTexture_f7xtn")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u14ej"]
+radius = 15.0
+height = 38.0
+
+[node name="Ant" type="CharacterBody2D" unique_id=1568591280]
+script = ExtResource("1_4ydk5")
+
+[node name="AntSprite" type="AnimatedSprite2D" parent="." unique_id=1396008363]
+sprite_frames = SubResource("SpriteFrames_u14ej")
+animation = &"Idle"
+frame_progress = 0.27830186
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=25656165]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_u14ej")

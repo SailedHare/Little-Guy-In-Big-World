@@ -1,6 +1,9 @@
-TileMapLayer
-CollisionShape2D
-RigidBody2D
 Sprite2D
-Camera2D
+Parallax2D
+WorldEnvironment
+CollisionShape2D
 AnimatedSprite2D
+CharacterBody2D
+TileMapLayer
+RigidBody2D
+Camera2D
