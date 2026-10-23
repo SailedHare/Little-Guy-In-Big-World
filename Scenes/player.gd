@@ -19,9 +19,7 @@ var jumped = false
 @onready var text_box: NinePatchRect = $CanvasLayer/TextBox
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("interact") and not event.is_echo():
-		text_box.visible = not text_box.visible
+
 
 
 func _physics_process(delta: float) -> void:

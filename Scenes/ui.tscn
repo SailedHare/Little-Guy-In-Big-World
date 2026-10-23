@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://b4505l3rutn2l"]
 
+[ext_resource type="PackedScene" uid="uid://dsf0mrit28r7u" path="res://Scenes/text_box.tscn" id="1_jxero"]
+[ext_resource type="Script" uid="uid://cq0grshecwfu2" path="res://Scripts/ui.gd" id="1_qdvrb"]
+
 [node name="UI" type="CanvasLayer" unique_id=840995790]
+layer = 2
+script = ExtResource("1_qdvrb")
+
+[node name="Text Box" parent="." unique_id=161280784 instance=ExtResource("1_jxero")]
+axis_stretch_horizontal = 1

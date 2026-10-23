@@ -1,3 +1,6 @@
-res://Scenes/player.gd
 res://Scenes/text_box.tscn
+res://Scenes/ui.tscn
+res://Scenes/player.tscn
+res://Scenes/player.gd
+res://Scripts/ui.gd
 res://Scenes/main.tscn

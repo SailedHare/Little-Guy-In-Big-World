@@ -29,6 +29,7 @@ position = Vector2(-96, 63)
 
 [node name="UI" parent="." unique_id=840995790 instance=ExtResource("5_kry3j")]
 layer = 100
+follow_viewport_enabled = false
 
 [node name="Jerald" parent="." unique_id=175109271 instance=ExtResource("6_21xkr")]
 position = Vector2(70, -17)
