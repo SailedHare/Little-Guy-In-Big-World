@@ -198,6 +198,8 @@ rotation = 0.0021795093
 shape = SubResource("CapsuleShape2D_u14ej")
 
 [node name="Interact" type="Area2D" parent="." unique_id=675955079]
+collision_layer = 9
+collision_mask = 9
 
 [node name="InteractCollision" type="CollisionShape2D" parent="Interact" unique_id=1353066944]
 shape = SubResource("CircleShape2D_u14ej")

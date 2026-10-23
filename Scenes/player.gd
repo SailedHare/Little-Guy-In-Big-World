@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var ui: CanvasLayer = %UI
 
 var max_speed = 100
 var acceleration = 100
@@ -16,13 +17,26 @@ const gravity_const = 500
 var jumped = false
 
 @onready var player_sprite: AnimatedSprite2D = $PlayerSprite
-@onready var text_box: NinePatchRect = $CanvasLayer/TextBox
+#@onready var text_box: NinePatchRect = $CanvasLayer/TextBox
 
 
-
+func _ready() -> void:
+	#$Interact.body_entered.connect(interactentered)
+	pass
 
 
 func _physics_process(delta: float) -> void:
+	
+	var overlapping_bodies: Array[Node2D] = $Interact.get_overlapping_bodies()
+	if overlapping_bodies.size() > 0:
+		for body in overlapping_bodies:
+			if body.name == "Jerald":
+				if Input.is_action_just_pressed("interact"):
+					ui.text = not ui.text
+					print(ui.text)
+					
+	
+	
 	movement(delta)
 	flipping()
 
@@ -92,3 +106,11 @@ func flipping() -> void:
 #     player_sprite.play("Splat")
 #     if player_sprite.frame == 3:
 #         jumped = false
+func interactentered(body):
+	print("hi")
+	if body.name == "Jerald":
+		if Input.is_action_just_pressed("interact"):
+			ui.text != ui.text
+
+		
+	
