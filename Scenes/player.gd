@@ -5,15 +5,15 @@ var max_speed = 100
 var acceleration = 100
 var direction
 var friction = 500
-var jump_velocity = 50.0
+var jump_velocity = 30.0
 
 const MIN_JUMP_VELOCITY = 50.0
-const MAX_JUMP_VELOCITY = 140.0
+const MAX_JUMP_VELOCITY = 500.0
 const JUMP_CHARGE_SPEED = 150.0
 
 var facing = 1 # 1 = right, -1 = left
-var gravity = 200
-const gravity_const = 500
+var gravity = 5
+const gravity_const = 5
 var jumped = false
 
 @onready var player_sprite: AnimatedSprite2D = $PlayerSprite
@@ -45,7 +45,10 @@ func _physics_process(delta: float) -> void:
 	flipping()
 
 	if not is_on_floor():
-		velocity.y += gravity * delta
+		velocity.y += gravity
+		gravity + 2 * delta
+	elif is_on_floor(): 
+		gravity = gravity_const
 
 
 func movement(delta: float) -> void:

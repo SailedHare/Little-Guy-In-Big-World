@@ -5,7 +5,7 @@ var distance_to_player = 0
 var friction = 25
 var max_speed = 50
 var acceleration = 100
-var gravity = 1
+var gravity = 5 
 var gravity_const = 5
 var facing = 0
 var range = 40
@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y += gravity
 		gravity + 2 * delta
-	else: 
+	elif is_on_floor(): 
 		gravity = gravity_const
 		
 	
