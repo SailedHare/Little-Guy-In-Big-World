@@ -5,3 +5,6 @@ res://Scenes/player.tscn
 res://Scenes/ui.tscn
 res://Scenes/text_box.tscn
 res://Scripts/text_box.gd
+res://Scenes/ant.tscn
+res://Scripts/jerald.gd
+res://Scripts/ant.gd

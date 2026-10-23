@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var ant_sprite: AnimatedSprite2D = $AntSprite
 
 
-var gravity = 1
+var gravity = 5
 var gravity_const = 5
 
 func _physics_process(delta: float) -> void:

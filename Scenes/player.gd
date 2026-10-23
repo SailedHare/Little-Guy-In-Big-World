@@ -112,9 +112,14 @@ func flipping() -> void:
 #         jumped = false
 func interactentered(body):
 	print("hi")
-	if body.name == "Jerald":
-		if Input.is_action_just_pressed("interact"):
-			ui.text != ui.text
+	if Input.is_action_just_pressed("interact"):
+		match body.name:
+			"Jerald":
+				ui.text != ui.text
+			"Ant":
+				ui.text != ui.text
+		
+			
 
 		
 	

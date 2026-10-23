@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1qq6hisxa76g"]
 
-[ext_resource type="Script" uid="uid://7js5v2dco8gn" path="res://scripts/ant.gd" id="1_4ydk5"]
+[ext_resource type="Script" uid="uid://7js5v2dco8gn" path="res://Scripts/ant.gd" id="1_4ydk5"]
 [ext_resource type="Texture2D" uid="uid://e3yahirub4pr" path="res://Assets/Ant.png" id="2_fd48h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wtaqj"]
@@ -77,12 +77,13 @@ radius = 15.0
 height = 38.0
 
 [node name="Ant" type="CharacterBody2D" unique_id=1568591280]
+collision_layer = 3
 script = ExtResource("1_4ydk5")
 
 [node name="AntSprite" type="AnimatedSprite2D" parent="." unique_id=1396008363]
 sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"Idle"
-frame_progress = 0.27830186
+frame_progress = 0.4787228
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=25656165]
 rotation = -1.5707964
