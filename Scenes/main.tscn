@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b4505l3rutn2l" path="res://Scenes/ui.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://d2rk80v4fgqcy" path="res://Scenes/jerald.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://b1qq6hisxa76g" path="res://Scenes/ant.tscn" id="7_6bp64"]
+[ext_resource type="PackedScene" uid="uid://cn8ijumbw82aa" path="res://Scenes/fire_particles.tscn" id="8_344ge"]
 
 [node name="main" type="Node2D" unique_id=949516983]
 
@@ -43,3 +44,8 @@ collision_enabled = false
 
 [node name="Ant" parent="." unique_id=1568591280 instance=ExtResource("7_6bp64")]
 position = Vector2(64, -100)
+
+[node name="FireParticles" parent="." unique_id=1806650781 instance=ExtResource("8_344ge")]
+visible = false
+z_index = 1
+position = Vector2(95, -76)

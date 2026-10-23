@@ -8,8 +8,8 @@ var friction = 500
 var jump_velocity = 30.0
 
 const MIN_JUMP_VELOCITY = 50.0
-const MAX_JUMP_VELOCITY = 500.0
-const JUMP_CHARGE_SPEED = 150.0
+const MAX_JUMP_VELOCITY = 150.0
+const JUMP_CHARGE_SPEED = 200.0
 
 var facing = 1 # 1 = right, -1 = left
 var gravity = 5
@@ -75,10 +75,11 @@ func movement(delta: float) -> void:
 	# Charge while holding jump on the ground
 	if is_on_floor() and Input.is_action_pressed("jump") and ui.text == false:
 		player_sprite.play("Crouch")
-		jump_velocity = min(
-			jump_velocity + JUMP_CHARGE_SPEED * delta,
-			MAX_JUMP_VELOCITY
-		)
+		if jump_velocity < MAX_JUMP_VELOCITY:
+			jump_velocity = min(
+				jump_velocity + JUMP_CHARGE_SPEED * delta,
+				MAX_JUMP_VELOCITY
+			)
 		max_speed = 30
 
 	# Jump when releasing the button

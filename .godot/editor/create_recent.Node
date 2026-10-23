@@ -1,5 +1,8 @@
-AnimatedSprite2D
 CollisionShape2D
+AnimatedSprite2D
+RigidBody2D
+LightOccluder2D
+GPUParticles2D
 Area2D
 CharacterBody2D
 CanvasLayer
@@ -9,6 +12,3 @@ NinePatchRect
 Sprite2D
 Parallax2D
 WorldEnvironment
-TileMapLayer
-RigidBody2D
-Camera2D

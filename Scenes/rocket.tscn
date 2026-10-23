@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://cysfd0e86px5r"]
+
+[ext_resource type="Texture2D" uid="uid://c7nvstt03xdy6" path="res://Assets/RocketShip.png" id="1_wrv6b"]
+[ext_resource type="PackedScene" uid="uid://cn8ijumbw82aa" path="res://Scenes/fire_particles.tscn" id="2_kvp10"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvp10"]
+atlas = ExtResource("1_wrv6b")
+region = Rect2(192, 0, 96, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hthiq"]
+atlas = ExtResource("1_wrv6b")
+region = Rect2(96, 0, 96, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4fq7"]
+atlas = ExtResource("1_wrv6b")
+region = Rect2(288, 0, 96, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u14ej"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvp10")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hthiq")
+}],
+"loop": 1,
+"name": &"new_animation_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4fq7")
+}],
+"loop": 1,
+"name": &"new_animation_2",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqtu4"]
+size = Vector2(15, 105.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ai5g"]
+size = Vector2(32, 165)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w64c8"]
+size = Vector2(20, 58)
+
+[node name="Rocket" type="Node2D" unique_id=916546206]
+
+[node name="RightThruster" type="RigidBody2D" parent="." unique_id=354176519]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RightThruster" unique_id=413434980]
+sprite_frames = SubResource("SpriteFrames_u14ej")
+animation = &"new_animation_1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightThruster" unique_id=920979494]
+position = Vector2(25, 72.25)
+shape = SubResource("RectangleShape2D_uqtu4")
+
+[node name="FireParticles" parent="RightThruster" unique_id=1806650781 instance=ExtResource("2_kvp10")]
+position = Vector2(-25, 122)
+
+[node name="LeftThruster" type="RigidBody2D" parent="." unique_id=1309974629]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LeftThruster" unique_id=31920456]
+sprite_frames = SubResource("SpriteFrames_u14ej")
+animation = &"new_animation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftThruster" unique_id=1520196881]
+position = Vector2(-25.5, 72.25)
+shape = SubResource("RectangleShape2D_uqtu4")
+
+[node name="FireParticles" parent="LeftThruster" unique_id=639719693 instance=ExtResource("2_kvp10")]
+position = Vector2(25, 122)
+
+[node name="MainThruster" type="RigidBody2D" parent="." unique_id=272304621]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainThruster" unique_id=1228347809]
+sprite_frames = SubResource("SpriteFrames_u14ej")
+animation = &"new_animation_2"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MainThruster" unique_id=525219893]
+z_index = 1
+position = Vector2(0, 43.5)
+shape = SubResource("RectangleShape2D_4ai5g")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="MainThruster" unique_id=2006822883]
+z_index = 1
+position = Vector2(0, -68)
+shape = SubResource("RectangleShape2D_w64c8")
+
+[node name="FireParticles" parent="MainThruster" unique_id=93712920 instance=ExtResource("2_kvp10")]
+position = Vector2(-9, 122)
+
+[node name="FireParticles2" parent="MainThruster" unique_id=1256677696 instance=ExtResource("2_kvp10")]
+position = Vector2(7, 123)

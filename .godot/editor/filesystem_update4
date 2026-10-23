@@ -8,3 +8,5 @@ res://Scripts/text_box.gd
 res://Scenes/ant.tscn
 res://Scripts/jerald.gd
 res://Scripts/ant.gd
+res://Scenes/fire_particles.tscn
+res://Scenes/rocket.tscn
