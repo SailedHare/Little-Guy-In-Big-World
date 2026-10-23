@@ -58,7 +58,7 @@ func movement(delta):
 		max_speed = 30
 	elif velocity.x != 0:
 		player_sprite.play("Walk")
-	elif is_on_floor() and jumped == false:
+	elif is_on_floor() :
 		player_sprite.play("Idle" )
 	
 	
