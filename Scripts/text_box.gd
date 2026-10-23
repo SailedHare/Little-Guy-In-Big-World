@@ -1,4 +1,5 @@
 extends NinePatchRect
+@onready var label: Label = $Label
 
 @onready var head: AnimatedSprite2D = $Head
 

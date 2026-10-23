@@ -74,9 +74,6 @@ scale = Vector2(0.2, 0.2)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_0kxgl")
 theme_override_font_sizes/font_size = 4
-text = "Lucky we survived that
-crash. I thought we were
-goners."
 label_settings = SubResource("LabelSettings_2v8iq")
 autowrap_mode = 3
 
@@ -84,4 +81,4 @@ autowrap_mode = 3
 position = Vector2(33.999996, 35.6)
 sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"Jerald"
-frame_progress = 0.27616724
+frame_progress = 0.0052994085

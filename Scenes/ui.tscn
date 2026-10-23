@@ -1,15 +1,88 @@
 [gd_scene format=3 uid="uid://b4505l3rutn2l"]
 
-[ext_resource type="PackedScene" uid="uid://dsf0mrit28r7u" path="res://Scenes/text_box.tscn" id="1_jxero"]
 [ext_resource type="Script" uid="uid://cq0grshecwfu2" path="res://Scripts/ui.gd" id="1_qdvrb"]
+[ext_resource type="Texture2D" uid="uid://cavsritibgmwe" path="res://Assets/text box.png" id="2_2246s"]
+[ext_resource type="FontFile" uid="uid://dlp4aefopdnq4" path="res://Assets/Small Pixels.ttf" id="3_q7pk6"]
+[ext_resource type="Texture2D" uid="uid://dtkcdgn1xhpur" path="res://Assets/JeraldHead.png" id="4_m78vo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2v8iq"]
+line_spacing = 15.0
+paragraph_spacing = 3.0
+font = ExtResource("3_q7pk6")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6krc"]
+atlas = ExtResource("4_m78vo")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gqem"]
+atlas = ExtResource("4_m78vo")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q4u4"]
+atlas = ExtResource("4_m78vo")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l2j4"]
+atlas = ExtResource("4_m78vo")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u14ej"]
+animations = [{
+"frames": [{
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_w6krc")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_8gqem")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_1q4u4")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_2l2j4")
+}],
+"loop": 1,
+"name": &"Jerald",
+"speed": 5.0
+}]
 
 [node name="UI" type="CanvasLayer" unique_id=840995790]
 layer = 2
 script = ExtResource("1_qdvrb")
 
-[node name="Text Box" parent="." unique_id=161280784 instance=ExtResource("1_jxero")]
+[node name="Text Box" type="NinePatchRect" parent="." unique_id=161280784]
 offset_left = 197.0
 offset_top = 133.0
 offset_right = 356.4
 offset_bottom = 208.0
+scale = Vector2(5, 5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_2246s")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 18
 axis_stretch_horizontal = 1
+
+[node name="Text" type="Label" parent="Text Box" unique_id=1325355480]
+custom_minimum_size = Vector2(84, 44)
+layout_mode = 0
+offset_left = 67.6
+offset_top = 18.0
+offset_right = 411.6
+offset_bottom = 184.0
+scale = Vector2(0.2, 0.2)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_q7pk6")
+theme_override_font_sizes/font_size = 4
+label_settings = SubResource("LabelSettings_2v8iq")
+autowrap_mode = 3
+
+[node name="Head" type="AnimatedSprite2D" parent="Text Box" unique_id=367090246]
+position = Vector2(33.999996, 35.6)
+sprite_frames = SubResource("SpriteFrames_u14ej")
+animation = &"Jerald"
+frame_progress = 0.27616724

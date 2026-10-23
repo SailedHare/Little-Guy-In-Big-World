@@ -26,14 +26,18 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	
+	print(ui.person)
 	var overlapping_bodies: Array[Node2D] = $Interact.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
 		for body in overlapping_bodies:
-			if body.name == "Jerald":
-				if Input.is_action_just_pressed("interact"):
-					ui.text = not ui.text
-					print(ui.text)
+			if Input.is_action_just_pressed("interact"):
+				match body.name:
+					"Jerald":
+						ui.text = not ui.text
+						ui.person = "Jerald"
+					"Ant":
+						ui.text = not ui.text
+						ui.person = "Ant"
 					
 	
 	
@@ -110,14 +114,9 @@ func flipping() -> void:
 #     player_sprite.play("Splat")
 #     if player_sprite.frame == 3:
 #         jumped = false
-func interactentered(body):
-	print("hi")
-	if Input.is_action_just_pressed("interact"):
-		match body.name:
-			"Jerald":
-				ui.text != ui.text
-			"Ant":
-				ui.text != ui.text
+
+		
+		
 		
 			
 
