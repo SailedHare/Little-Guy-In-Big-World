@@ -8,7 +8,7 @@ var friction = 500
 var jump_velocity = 50.0
 
 const MIN_JUMP_VELOCITY = 50.0
-const MAX_JUMP_VELOCITY = 150.0
+const MAX_JUMP_VELOCITY = 140.0
 const JUMP_CHARGE_SPEED = 150.0
 
 var facing = 1 # 1 = right, -1 = left
