@@ -11,6 +11,11 @@ const gravity_const = 5
 var jumped = false
 
 @onready var player_sprite: AnimatedSprite2D = $PlayerSprite
+@onready var text_box: NinePatchRect = $CanvasLayer/TextBox
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("interact") and not event.is_echo():
+		text_box.visible = not text_box.visible
 
 
 

@@ -3,10 +3,32 @@
 [ext_resource type="Texture2D" uid="uid://cavsritibgmwe" path="res://Assets/text box.png" id="1_nwibb"]
 
 [node name="Text Box" type="NinePatchRect" unique_id=161280784]
-offset_right = 61.0
-offset_bottom = 34.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = -20.0
 texture = ExtResource("1_nwibb")
 patch_margin_left = 16
 patch_margin_top = 16
 patch_margin_right = 16
 patch_margin_bottom = 18
+
+[node name="Message" type="Label" parent="." unique_id=1808028214]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = -20.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hello there!"
+horizontal_alignment = 1
+vertical_alignment = 1

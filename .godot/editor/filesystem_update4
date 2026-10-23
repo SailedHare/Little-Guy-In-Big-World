@@ -1,5 +1,2 @@
-res://Scenes/grass_tilemap.tscn
-res://Scenes/main.tscn
 res://Scenes/player.gd
-res://Scenes/player.tscn
-res://scripts/ant.gd
+res://Scenes/text_box.tscn
