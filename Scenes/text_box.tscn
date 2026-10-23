@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dsf0mrit28r7u"]
+
+[ext_resource type="Texture2D" uid="uid://cavsritibgmwe" path="res://Assets/text box.png" id="1_nwibb"]
+
+[node name="Text Box" type="NinePatchRect" unique_id=161280784]
+offset_right = 61.0
+offset_bottom = 34.0
+texture = ExtResource("1_nwibb")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 18
