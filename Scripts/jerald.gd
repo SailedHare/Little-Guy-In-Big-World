@@ -2,7 +2,7 @@ extends CharacterBody2D
 @onready var jerald_sprite: AnimatedSprite2D = $JeraldSprite
 @onready var player: CharacterBody2D = %Player
 var distance_to_player = 0
-var friction = 50
+var friction = 25
 var max_speed = 50
 var acceleration = 100
 var gravity = 1
