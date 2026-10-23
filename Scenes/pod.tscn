@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bhojitmkplvp6"]
+
+[ext_resource type="Texture2D" uid="uid://ksuygpxkto8" path="res://Assets/Pod.png" id="1_nbybh"]
+
+[node name="Pod" type="Sprite2D" unique_id=77036530]
+texture = ExtResource("1_nbybh")
