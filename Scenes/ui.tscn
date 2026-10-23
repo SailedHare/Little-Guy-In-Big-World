@@ -8,4 +8,8 @@ layer = 2
 script = ExtResource("1_qdvrb")
 
 [node name="Text Box" parent="." unique_id=161280784 instance=ExtResource("1_jxero")]
+offset_left = 197.0
+offset_top = 133.0
+offset_right = 356.4
+offset_bottom = 208.0
 axis_stretch_horizontal = 1
