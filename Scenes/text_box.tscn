@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cavsritibgmwe" path="res://Assets/text box.png" id="1_nwibb"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_nwibb"]
+
 [node name="Text Box" type="NinePatchRect" unique_id=161280784]
 anchors_preset = 7
 anchor_left = 0.5
@@ -30,5 +32,6 @@ offset_bottom = -18.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Hello there!"
+label_settings = SubResource("LabelSettings_nwibb")
 horizontal_alignment = 1
 vertical_alignment = 1
