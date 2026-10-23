@@ -648,7 +648,7 @@ texture = ExtResource("1_x6ix0")
 0:0/0/terrains_peering_bit/bottom_side = 0
 
 [sub_resource type="TileSet" id="TileSet_u14ej"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 255
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Grass 0"
 terrain_set_0/terrain_0/color = Color(1.92523e-06, 0.7361088, 0.8734969, 1)

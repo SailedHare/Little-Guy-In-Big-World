@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://d2rk80v4fgqcy"]
+
+[ext_resource type="Script" uid="uid://bfgxeprt5nk6n" path="res://Scripts/jerald.gd" id="1_4ei6q"]
+[ext_resource type="Texture2D" uid="uid://co2g8hdcl5mvb" path="res://Assets/Astroughtnaut.png" id="1_8c7cq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ei6q"]
+atlas = ExtResource("1_8c7cq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slmku"]
+atlas = ExtResource("1_8c7cq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfatp"]
+atlas = ExtResource("1_8c7cq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hirxm"]
+atlas = ExtResource("1_8c7cq")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sx1i4"]
+atlas = ExtResource("1_8c7cq")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yluqs"]
+atlas = ExtResource("1_8c7cq")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uxlu"]
+atlas = ExtResource("1_8c7cq")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onqpn"]
+atlas = ExtResource("1_8c7cq")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u14ej"]
+animations = [{
+"frames": [{
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_4ei6q")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_slmku")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_tfatp")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_hirxm")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_sx1i4")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_yluqs")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_5uxlu")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_onqpn")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u14ej"]
+radius = 7.0
+height = 24.0
+
+[node name="Jerald" type="CharacterBody2D" unique_id=175109271]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_4ei6q")
+
+[node name="JeraldSprite" type="AnimatedSprite2D" parent="." unique_id=998121384]
+sprite_frames = SubResource("SpriteFrames_u14ej")
+animation = &"Walk"
+frame_progress = 0.2964822
+
+[node name="JeraldCollision" type="CollisionShape2D" parent="." unique_id=2023037374]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_u14ej")
