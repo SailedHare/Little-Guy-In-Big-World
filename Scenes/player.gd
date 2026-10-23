@@ -1,6 +1,6 @@
 extends CharacterBody2D
-var max_speed = 100
-var acceleration = 200
+var max_speed = 50
+var acceleration = 100
 var direction
 var friction = 500
 var jump_velocity = 50

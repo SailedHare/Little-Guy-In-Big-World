@@ -1,10 +1,2 @@
-res://Scenes/player.gd
-<<<<<<< HEAD
-res://Scenes/player.tscn
-res://scripts/ant.gd
-res://Scenes/text_box.tscn
-res://Scenes/jerald.tscn
 res://Scripts/jerald.gd
-=======
-res://Scenes/text_box.tscn
->>>>>>> 133514f9b1926cc9d90e38a76b0919d8a3ade072
+res://Scenes/player.gd
