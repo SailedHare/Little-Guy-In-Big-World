@@ -8,6 +8,7 @@ var acceleration = 100
 var gravity = 1
 var gravity_const = 5
 var facing = 0
+var range = 40
 func _physics_process(delta: float) -> void:
 	flipping()
 	distance_to_player = self.global_position - player.global_position
@@ -16,9 +17,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		jerald_sprite.play("Idle")
 	
-	if distance_to_player.x > 25:
+	if distance_to_player.x > range:
 		self.velocity.x = move_toward(velocity.x, -1 * max_speed,acceleration* delta )
-	elif distance_to_player.x < -25:
+	elif distance_to_player.x < -range:
 		self.velocity.x = move_toward(velocity.x, 1 * max_speed,acceleration* delta )
 	else:
 		velocity.x = move_toward(velocity.x, 0 , friction * delta)

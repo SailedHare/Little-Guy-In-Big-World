@@ -3,8 +3,8 @@ var max_speed = 100
 var acceleration = 200
 var direction
 var friction = 500
-var jump_velocity = 100
-const jump_velo_const = 100
+var jump_velocity = 50
+const jump_velo_const = 50
 var facing = 1 #1 = right -1 = left
 var gravity = 1
 const gravity_const = 5
@@ -54,11 +54,11 @@ func movement(delta):
 		player_sprite.play("Crouch")
 		if jump_velocity < 150:
 			print("hi")
-			jump_velocity += 50 * delta
+			jump_velocity += 150 * delta
 		max_speed = 30
 	elif velocity.x != 0:
 		player_sprite.play("Walk")
-	elif is_on_floor() and jumped == false:
+	elif is_on_floor():
 		player_sprite.play("Idle" )
 	
 	
