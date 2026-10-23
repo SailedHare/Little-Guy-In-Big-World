@@ -172,8 +172,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u14ej"]
-radius = 6.0
-height = 20.0
+radius = 5.9999857
+height = 19.999954
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u14ej"]
+radius = 15.0
 
 [node name="Player" type="CharacterBody2D" unique_id=382361107]
 script = ExtResource("1_cvnsp")
@@ -191,4 +194,10 @@ position_smoothing_enabled = true
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1470521513]
 position = Vector2(0, -1)
+rotation = 0.0021795093
 shape = SubResource("CapsuleShape2D_u14ej")
+
+[node name="Interact" type="Area2D" parent="." unique_id=675955079]
+
+[node name="InteractCollision" type="CollisionShape2D" parent="Interact" unique_id=1353066944]
+shape = SubResource("CircleShape2D_u14ej")

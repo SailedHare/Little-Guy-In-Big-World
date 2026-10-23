@@ -32,7 +32,8 @@ func _physics_process(delta: float) -> void:
 
 func movement(delta: float) -> void:
 	direction = Input.get_axis("left", "right")
-
+	#print($Interact.get_overlapping_bodies())a
+	
 	if direction:
 		velocity.x = move_toward(
 			velocity.x,
@@ -85,7 +86,7 @@ func flipping() -> void:
 		-1:
 			player_sprite.flip_h = true
 
-
+	
 # AVY CAN YOU MAKE IT SO WHEN FALLING FROM A CERTAIN DISTANCE THE THING BELOW HAPPENS
 # if jumped == true and is_on_floor():
 #     player_sprite.play("Splat")
