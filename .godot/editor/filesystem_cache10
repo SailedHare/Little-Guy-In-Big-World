@@ -1,4 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
+<<<<<<< HEAD
 ::res://::1792718092
 icon.svg::CompressedTexture2D::2215899920417346810::1792699093::1792699454::1::::<><><>0<>0<>996bf6f93f6b45b444543f62499eb81b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Assets/::1792718443
@@ -22,3 +23,25 @@ ui.tscn::PackedScene::4485400602265408845::1792718024::0::1::::<><><>0<>0<><>::
 text_box.tscn::PackedScene::8434523385836265008::1792718002::0::1::::<><><>0<>0<><>::uid://cavsritibgmwe::::res://Assets/text box.png<>uid://dlp4aefopdnq4::::res://Assets/Small Pixels.ttf
 ::res://Scripts/::1792717727
 ant.gd::GDScript::2265770020730157325::1792717727::0::1::::<>CharacterBody2D<><>0<>0<><>::
+=======
+::res://::1792718032
+icon.svg::CompressedTexture2D::2215899920417346810::1792713811::1792713811::1::::<><><>0<>0<>996bf6f93f6b45b444543f62499eb81b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Assets/::1792718038
+Ant.png::CompressedTexture2D::340015540313287019::1792716567::1792716567::1::::<><><>0<>0<>168adad6c620e878b0b5134eea45ae3b<>res://.godot/imported/Ant.png-4958adb836b08d490eea6b2569e20013.ctex::
+Background.png::CompressedTexture2D::1000804126469601704::1792716567::1792716569::1::::<><><>0<>0<>97af4d0776b664d55a6f66249ccf08dc<>res://.godot/imported/Background.png-e8880a50f4091751eaed728281d3c21e.ctex::
+GrassTilemap.png::CompressedTexture2D::4977476968311901553::1792713811::1792713811::1::::<><><>0<>0<>47f68885d67b711a9e4a6eba0cbca4fd<>res://.godot/imported/GrassTilemap.png-e3578cf165757c64c2c6ebb61d2d040a.ctex::
+PlayerSpriteSheet.png::CompressedTexture2D::9003142314363111013::1792713811::1792713811::1::::<><><>0<>0<>8b8d56058d323c734ec8d38f4fe1dfeb<>res://.godot/imported/PlayerSpriteSheet.png-43f5010c586cd375297424f27287b64e.ctex::
+Pod.png::CompressedTexture2D::21773669830404585::1792717369::1792718032::1::::<><><>0<>0<>d7c18485e3c7da44a33a588f6ad6d5e9<>res://.godot/imported/Pod.png-432d09b0a77f60646fc11b2e3f91b5f7.ctex::
+Sky.png::CompressedTexture2D::2549447218570713090::1792716567::1792716569::1::::<><><>0<>0<>1c8e07426276b6d55db99b4710832759<>res://.godot/imported/Sky.png-fa629b70893d3764ded0a018668b5b30.ctex::
+text box.png::CompressedTexture2D::4817317014490792224::1792718038::1792718041::1::::<><><>0<>0<>6d492405c2301d886c6a47e76ad0be09<>res://.godot/imported/text box.png-30f3570022c667a8c650a733ffcc0550.ctex::
+::res://Scenes/::1792718038
+ant.tscn::PackedScene::4245387874712712404::1792716567::0::1::::<><><>0<>0<><>::
+grass_tilemap.tscn::PackedScene::6501576794050963853::1792717369::0::1::::<><><>0<>0<><>::uid://cc6ek3elxdbs8::::res://Assets/GrassTilemap.png
+main.tscn::PackedScene::5364967369444691601::1792718038::0::1::::<><><>0<>0<><>::uid://cs4remno7c8bn::::res://Scenes/player.tscn<>uid://cyvoaxam1y27b::::res://Scenes/grass_tilemap.tscn<>uid://bck8a13jv1vwc::::res://Assets/Sky.png<>uid://bhojitmkplvp6::::res://Scenes/pod.tscn
+player.gd::GDScript::3790276833712966608::1792715389::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::6097147490832802627::1792713811::0::1::::<><><>0<>0<><>::uid://buabknmvx8sdk::::res://Scenes/player.gd<>uid://d1jgo57pqab5f::::res://Assets/PlayerSpriteSheet.png
+pod.tscn::PackedScene::2907205633958464121::1792718032::0::1::::<><><>0<>0<><>::uid://ksuygpxkto8::::res://Assets/Pod.png
+text_box.tscn::PackedScene::8434523385836265008::1792718038::0::1::::<><><>0<>0<><>::
+::res://Scripts/::1792716567
+ant.gd::GDScript::2265770020730157325::1792716567::0::1::::<>CharacterBody2D<><>0<>0<><>::
+>>>>>>> 133514f9b1926cc9d90e38a76b0919d8a3ade072
