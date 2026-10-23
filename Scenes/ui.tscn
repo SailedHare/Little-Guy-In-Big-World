@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cavsritibgmwe" path="res://Assets/text box.png" id="2_2246s"]
 [ext_resource type="FontFile" uid="uid://dlp4aefopdnq4" path="res://Assets/Small Pixels.ttf" id="3_q7pk6"]
 [ext_resource type="Texture2D" uid="uid://dtkcdgn1xhpur" path="res://Assets/JeraldHead.png" id="4_m78vo"]
+[ext_resource type="Texture2D" uid="uid://cbfv2vyy3pc6" path="res://Assets/AntHead.png" id="4_q7pk6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2v8iq"]
 line_spacing = 15.0
@@ -11,6 +12,22 @@ paragraph_spacing = 3.0
 font = ExtResource("3_q7pk6")
 font_size = 20
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m78vo"]
+atlas = ExtResource("4_q7pk6")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smcll"]
+atlas = ExtResource("4_q7pk6")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryf15"]
+atlas = ExtResource("4_q7pk6")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmixe"]
+atlas = ExtResource("4_q7pk6")
+region = Rect2(144, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6krc"]
 atlas = ExtResource("4_m78vo")
@@ -30,6 +47,23 @@ region = Rect2(144, 0, 48, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u14ej"]
 animations = [{
+"frames": [{
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_m78vo")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_smcll")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_ryf15")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_mmixe")
+}],
+"loop": 1,
+"name": &"Ant",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 0.9,
 "texture": SubResource("AtlasTexture_w6krc")
@@ -84,5 +118,4 @@ autowrap_mode = 3
 [node name="Head" type="AnimatedSprite2D" parent="Text Box" unique_id=367090246]
 position = Vector2(33.999996, 35.6)
 sprite_frames = SubResource("SpriteFrames_u14ej")
-animation = &"Jerald"
-frame_progress = 0.27616724
+animation = &"Ant"

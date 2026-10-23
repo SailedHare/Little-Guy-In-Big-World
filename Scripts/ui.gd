@@ -31,4 +31,5 @@ func _process(delta: float) -> void:
 		"Ant":
 			text_label.text = ant_lines.pick_random()
 			person = ""
+			$"Text Box/Head".play("Ant")
 	
