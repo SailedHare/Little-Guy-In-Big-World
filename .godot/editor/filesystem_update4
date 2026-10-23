@@ -3,3 +3,5 @@ res://Scenes/player.gd
 res://Scripts/ui.gd
 res://Scenes/player.tscn
 res://Scenes/ui.tscn
+res://Scenes/text_box.tscn
+res://Scripts/text_box.gd

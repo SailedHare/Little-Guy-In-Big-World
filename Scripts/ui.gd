@@ -10,7 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	#if text == true and Input.is_action_just_pressed("escape"):
-		#text = false
+	if Input.is_action_just_pressed("escape"):
+		text = false
 	match text:
 		true:
 			$"Text Box".visible = true
