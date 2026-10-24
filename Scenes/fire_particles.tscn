@@ -45,7 +45,7 @@ collision_bounce = 0.14
 
 [node name="FireParticles" type="GPUParticles2D" unique_id=1806650781]
 material = SubResource("CanvasItemMaterial_uqtu4")
-amount = 2000
+amount = 1000
 texture = ExtResource("1_dobhm")
 lifetime = 1.8800000000000001
 randomness = 0.2
