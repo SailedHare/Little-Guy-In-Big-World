@@ -25,6 +25,13 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0 , friction * delta)
 	
 	
+	
+	if velocity.y < -0.1 :
+		$FireParticles.emitting = true
+	elif velocity.y > 0.3:
+		$FireParticles.emitting = true
+	else:
+		$FireParticles.emitting = false
 	if not is_on_floor():
 		velocity.y += gravity
 		gravity + 2 * delta

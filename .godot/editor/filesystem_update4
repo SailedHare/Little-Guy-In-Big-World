@@ -1,12 +1,4 @@
-res://Scenes/main.tscn
-res://Scenes/player.gd
-res://Scripts/ui.gd
-res://Scenes/player.tscn
-res://Scenes/ui.tscn
-res://Scenes/text_box.tscn
-res://Scripts/text_box.gd
-res://Scenes/ant.tscn
+res://Scenes/jerald.tscn
+res://Scenes/new_particle_process_material.tres
 res://Scripts/jerald.gd
-res://Scripts/ant.gd
-res://Scenes/fire_particles.tscn
-res://Scenes/rocket.tscn
+res://Scenes/grass_tilemap.tscn

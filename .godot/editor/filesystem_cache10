@@ -1,12 +1,12 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1792736581
+::res://::1792810732
 icon.svg::CompressedTexture2D::2215899920417346810::1792699093::1792699454::1::::<><><>0<>0<>996bf6f93f6b45b444543f62499eb81b<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Assets/::1792791004
+::res://Assets/::1792810503
 Ant.png::CompressedTexture2D::340015540313287019::1792715672::1792715673::1::::<><><>0<>0<>168adad6c620e878b0b5134eea45ae3b<>res://.godot/imported/Ant.png-4958adb836b08d490eea6b2569e20013.ctex::
 AntHead.png::CompressedTexture2D::142784603360946495::1792768226::1792768228::1::::<><><>0<>0<>709884b29722c82d8e556e0cf101c04c<>res://.godot/imported/AntHead.png-e57a573a1ccdfeaafaae8f9978e62031.ctex::
 Astroughtnaut.png::CompressedTexture2D::5811646983238358299::1792718443::1792718452::1::::<><><>0<>0<>c1801176ec7c851edf58c933527bb29a<>res://.godot/imported/Astroughtnaut.png-487a8c25a5a3e7e138675a39e0e09c7e.ctex::
 Background.png::CompressedTexture2D::1000804126469601704::1792716389::1792716390::1::::<><><>0<>0<>97af4d0776b664d55a6f66249ccf08dc<>res://.godot/imported/Background.png-e8880a50f4091751eaed728281d3c21e.ctex::
-FireParticles.png::CompressedTexture2D::3566393851846824225::1792786955::1792786985::1::::<><><>0<>0<>9f2c31e296db4eb019d72b6c656a6a37<>res://.godot/imported/FireParticles.png-7068f5080b5b3861aa6a654a1eaa2a78.ctex::
+FireParticles.png::CompressedTexture2D::3566393851846824225::1792810502::1792810503::1::::<><><>0<>0<>9f2c31e296db4eb019d72b6c656a6a37<>res://.godot/imported/FireParticles.png-7068f5080b5b3861aa6a654a1eaa2a78.ctex::
 GrassTilemap.png::CompressedTexture2D::4977476968311901553::1792709484::1792709485::1::::<><><>0<>0<>47f68885d67b711a9e4a6eba0cbca4fd<>res://.godot/imported/GrassTilemap.png-e3578cf165757c64c2c6ebb61d2d040a.ctex::
 JeraldHead.png::CompressedTexture2D::8513620985544672029::1792737408::1792737409::1::::<><><>0<>0<>27a1b828cb9589836cbf9bc0bf2282ad<>res://.godot/imported/JeraldHead.png-07607242468086cb5d4d32077df4ffcc.ctex::
 PlayerSpriteSheet.png::CompressedTexture2D::9003142314363111013::1792699521::1792699522::1::::<><><>0<>0<>8b8d56058d323c734ec8d38f4fe1dfeb<>res://.godot/imported/PlayerSpriteSheet.png-43f5010c586cd375297424f27287b64e.ctex::
@@ -15,15 +15,17 @@ RocketShip.png::CompressedTexture2D::7047029504213547315::1792791004::1792791025
 Sky.png::CompressedTexture2D::2549447218570713090::1792716172::1792716174::1::::<><><>0<>0<>1c8e07426276b6d55db99b4710832759<>res://.godot/imported/Sky.png-fa629b70893d3764ded0a018668b5b30.ctex::
 Small Pixels.ttf::FontFile::7964066008672480633::1792717921::1792717922::1::::<><><>0<>0<>131aebb568b41f1ff8c131300b81cbd6<>res://.godot/imported/Small Pixels.ttf-0546640bed2a3fdf66d5fc6ad2564feb.fontdata::
 text box.png::CompressedTexture2D::4817317014490792224::1792717718::1792717720::1::::<><><>0<>0<>6d492405c2301d886c6a47e76ad0be09<>res://.godot/imported/text box.png-30f3570022c667a8c650a733ffcc0550.ctex::
-::res://Scenes/::1792790853
+::res://Scenes/::1792810669
 ant.tscn::PackedScene::4245387874712712404::1792766073::0::1::::<><><>0<>0<><>::uid://7js5v2dco8gn::::res://Scripts/ant.gd<>uid://e3yahirub4pr::::res://Assets/Ant.png
+fire_particles.tscn::PackedScene::5753923677732690420::1792810669::0::1::::<><><>0<>0<><>::uid://bq2t8rpkaugv6::::res://Assets/FireParticles.png<>uid://b333l12bo2laa::::res://Scenes/new_particle_process_material.tres
 grass_tilemap.tscn::PackedScene::6501576794050963853::1792719096::0::1::::<><><>0<>0<><>::uid://cc6ek3elxdbs8::::res://Assets/GrassTilemap.png
-jerald.tscn::PackedScene::9090122699100929660::1792719241::0::1::::<><><>0<>0<><>::uid://bfgxeprt5nk6n::::res://Scripts/jerald.gd<>uid://co2g8hdcl5mvb::::res://Assets/Astroughtnaut.png
-main.tscn::PackedScene::5364967369444691601::1792790804::0::1::::<><><>0<>0<><>::uid://cs4remno7c8bn::::res://Scenes/player.tscn<>uid://cyvoaxam1y27b::::res://Scenes/grass_tilemap.tscn<>uid://bck8a13jv1vwc::::res://Assets/Sky.png<>uid://bhojitmkplvp6::::res://Scenes/pod.tscn<>uid://b4505l3rutn2l::::res://Scenes/ui.tscn<>uid://d2rk80v4fgqcy::::res://Scenes/jerald.tscn<>uid://b1qq6hisxa76g::::res://Scenes/ant.tscn<>uid://cn8ijumbw82aa::::res://Scenes/fire_particles.tscn
+jerald.tscn::PackedScene::9090122699100929660::1792810669::0::1::::<><><>0<>0<><>::uid://bfgxeprt5nk6n::::res://Scripts/jerald.gd<>uid://co2g8hdcl5mvb::::res://Assets/Astroughtnaut.png<>uid://bq2t8rpkaugv6::::res://Assets/FireParticles.png
+main.tscn::PackedScene::5364967369444691601::1792791726::0::1::::<><><>0<>0<><>::uid://cs4remno7c8bn::::res://Scenes/player.tscn<>uid://cyvoaxam1y27b::::res://Scenes/grass_tilemap.tscn<>uid://bck8a13jv1vwc::::res://Assets/Sky.png<>uid://bhojitmkplvp6::::res://Scenes/pod.tscn<>uid://b4505l3rutn2l::::res://Scenes/ui.tscn<>uid://d2rk80v4fgqcy::::res://Scenes/jerald.tscn<>uid://b1qq6hisxa76g::::res://Scenes/ant.tscn<>uid://cn8ijumbw82aa::::res://Scenes/fire_particles.tscn
+new_particle_process_material.tres::ParticleProcessMaterial::4411232009584137412::1792810248::0::1::::<><><>0<>0<><>::
 player.gd::GDScript::3790276833712966608::1792785231::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene::6097147490832802627::1792767569::0::1::::<><><>0<>0<><>::uid://buabknmvx8sdk::::res://Scenes/player.gd<>uid://d1jgo57pqab5f::::res://Assets/PlayerSpriteSheet.png
 pod.tscn::PackedScene::2907205633958464121::1792716631::0::1::::<><><>0<>0<><>::uid://ksuygpxkto8::::res://Assets/Pod.png
-fire_particles.tscn::PackedScene::5753923677732690420::1792790853::0::1::::<><><>0<>0<><>::uid://bq2t8rpkaugv6::::res://Assets/FireParticles.png
+rocket.tscn::PackedScene::6494842677421986161::1792791745::0::1::::<><><>0<>0<><>::uid://c7nvstt03xdy6::::res://Assets/RocketShip.png<>uid://cn8ijumbw82aa::::res://Scenes/fire_particles.tscn
 text_box.tscn::PackedScene::8434523385836265008::1792766888::0::1::::<><><>0<>0<><>::uid://cavsritibgmwe::::res://Assets/text box.png<>uid://dlp4aefopdnq4::::res://Assets/Small Pixels.ttf<>uid://jue1av1bdww2::::res://Scripts/text_box.gd<>uid://dtkcdgn1xhpur::::res://Assets/JeraldHead.png
 ui.tscn::PackedScene::4485400602265408845::1792768450::0::1::::<><><>0<>0<><>::uid://cq0grshecwfu2::::res://Scripts/ui.gd<>uid://cavsritibgmwe::::res://Assets/text box.png<>uid://dlp4aefopdnq4::::res://Assets/Small Pixels.ttf<>uid://dtkcdgn1xhpur::::res://Assets/JeraldHead.png<>uid://cbfv2vyy3pc6::::res://Assets/AntHead.png
 ::res://Scripts/::1792772284
