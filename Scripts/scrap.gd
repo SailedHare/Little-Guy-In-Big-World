@@ -11,7 +11,14 @@ func _process(delta: float) -> void:
 	var overlapping_bodies: Array[Node2D] = get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
 		for body in overlapping_bodies:
-			#print("body.name")
 			if body.name == "Player" and Input.is_action_just_pressed("interact"):
 				body.scraps +=1
-				queue_free()
+				self.global_position = self.global_position.move_toward(body.global_position,2 * delta)
+				if body.name == "Player":
+					var shrink = get_tree().create_tween().parallel()
+					shrink.set_ease(Tween.EaseType.EASE_IN_OUT)
+					shrink.set_trans(Tween.TransitionType.TRANS_QUAD)
+					shrink.tween_property($ScrapSprite, "scale",Vector2(0,0), .3)
+					await shrink.finished
+					queue_free()
+	

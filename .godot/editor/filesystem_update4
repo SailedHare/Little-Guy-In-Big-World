@@ -1,6 +1,3 @@
-res://Scenes/new_particle_process_material.tres
-res://Scenes/player.tscn
-res://Scenes/player.gd
-res://Scenes/scrap.tscn
 res://Scripts/scrap.gd
 res://Scenes/main.tscn
+res://Scenes/new_particle_process_material.tres
