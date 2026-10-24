@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 	var overlapping_bodies: Array[Node2D] = $Interact.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
 		for body in overlapping_bodies:
-			print(body.name)
+			#print(body.name)
 			if Input.is_action_just_pressed("interact"):
 				match body.name:
 					"Jerald":

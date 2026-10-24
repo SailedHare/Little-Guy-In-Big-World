@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall() and is_on_floor():
 		#await get_tree().create_timer(10*delta).timeout
 		velocity.y = -140
-		print(velocity.y)
+		#print(velocity.y)
 
 	move_and_slide()
 	

@@ -5,6 +5,8 @@
 [ext_resource type="FontFile" uid="uid://dlp4aefopdnq4" path="res://Assets/Small Pixels.ttf" id="3_q7pk6"]
 [ext_resource type="Texture2D" uid="uid://dtkcdgn1xhpur" path="res://Assets/JeraldHead.png" id="4_m78vo"]
 [ext_resource type="Texture2D" uid="uid://cbfv2vyy3pc6" path="res://Assets/AntHead.png" id="4_q7pk6"]
+[ext_resource type="Texture2D" uid="uid://du11xan2j41ji" path="res://Assets/Scrap.png" id="6_m78vo"]
+[ext_resource type="FontFile" uid="uid://csyvcx1g840w8" path="res://Assets/aseprite.ttf" id="7_smcll"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2v8iq"]
 line_spacing = 15.0
@@ -82,6 +84,42 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt8jn"]
+atlas = ExtResource("6_m78vo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0wmg"]
+atlas = ExtResource("6_m78vo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vbiv"]
+atlas = ExtResource("6_m78vo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r70p"]
+atlas = ExtResource("6_m78vo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqtu4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt8jn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0wmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vbiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r70p")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="UI" type="CanvasLayer" unique_id=840995790]
 layer = 2
 script = ExtResource("1_qdvrb")
@@ -120,3 +158,20 @@ autowrap_mode = 3
 position = Vector2(33.999996, 35.6)
 sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"Ant"
+
+[node name="Scrap" type="AnimatedSprite2D" parent="." unique_id=1697156034]
+position = Vector2(-133, 52)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_uqtu4")
+frame_progress = 0.15347703
+
+[node name="Label" type="Label" parent="." unique_id=642622840]
+offset_left = -50.0
+offset_top = 55.0
+offset_right = -10.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_smcll")
+theme_override_font_sizes/font_size = 53
+text = "hi
+"
