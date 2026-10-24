@@ -8,6 +8,7 @@ var acceleration = 100
 var direction
 var friction = 500
 var jump_velocity = 30.0
+var scraps = 0
 
 const MIN_JUMP_VELOCITY = 50.0
 const MAX_JUMP_VELOCITY = 150.0
@@ -28,10 +29,11 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	print(ui.person)
+	
 	var overlapping_bodies: Array[Node2D] = $Interact.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
 		for body in overlapping_bodies:
+			print(body.name)
 			if Input.is_action_just_pressed("interact"):
 				match body.name:
 					"Jerald":
@@ -40,8 +42,8 @@ func _physics_process(delta: float) -> void:
 					"Ant":
 						ui.text = not ui.text
 						ui.person = "Ant"
-					
-	
+
+
 	
 	movement(delta)
 	flipping()

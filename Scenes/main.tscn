@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b4505l3rutn2l" path="res://Scenes/ui.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://d2rk80v4fgqcy" path="res://Scenes/jerald.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://bsq3ieeqhtija" path="res://Scenes/dirt.tscn" id="7_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://btl0e8kf43wtc" path="res://Scenes/scrap.tscn" id="9_hptm8"]
 [ext_resource type="PackedScene" uid="uid://cysfd0e86px5r" path="res://Scenes/rocket.tscn" id="9_ynf5e"]
 
 [node name="main" type="Node2D" unique_id=949516983]
@@ -41,3 +42,6 @@ position = Vector2(70, -17)
 [node name="Rocket" parent="." unique_id=916546206 instance=ExtResource("9_ynf5e")]
 z_index = -3
 position = Vector2(266, -138)
+
+[node name="Scrap" parent="." unique_id=954714235 groups=["ScrapMetal"] instance=ExtResource("9_hptm8")]
+position = Vector2(185, -21)

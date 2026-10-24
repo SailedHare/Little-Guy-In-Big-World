@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://btl0e8kf43wtc"]
+
+[ext_resource type="Texture2D" uid="uid://du11xan2j41ji" path="res://Assets/Scrap.png" id="1_itaa7"]
+[ext_resource type="Script" uid="uid://dfu76isdvm4sg" path="res://Scripts/scrap.gd" id="1_nkhrt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkhrt"]
+atlas = ExtResource("1_itaa7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cu64b"]
+atlas = ExtResource("1_itaa7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ei58"]
+atlas = ExtResource("1_itaa7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f6fw"]
+atlas = ExtResource("1_itaa7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u14ej"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkhrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cu64b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ei58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f6fw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u14ej"]
+
+[node name="Scrap" type="Area2D" unique_id=954714235]
+collision_layer = 15
+collision_mask = 15
+script = ExtResource("1_nkhrt")
+
+[node name="ScrapSprite" type="AnimatedSprite2D" parent="." unique_id=1648652556 groups=["ScrapMetal"]]
+sprite_frames = SubResource("SpriteFrames_u14ej")
+frame_progress = 0.883078
+
+[node name="ScrapCollision" type="CollisionShape2D" parent="." unique_id=1015527118]
+shape = SubResource("CircleShape2D_u14ej")
