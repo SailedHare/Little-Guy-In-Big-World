@@ -2,3 +2,6 @@ res://Scenes/jerald.tscn
 res://Scenes/new_particle_process_material.tres
 res://Scripts/jerald.gd
 res://Scenes/grass_tilemap.tscn
+res://Scenes/fire_particles.tscn
+res://Scenes/main.tscn
+res://Scenes/dirt.tscn

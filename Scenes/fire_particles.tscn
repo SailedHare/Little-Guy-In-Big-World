@@ -15,4 +15,5 @@ amount = 1000
 texture = ExtResource("1_dobhm")
 lifetime = 1.88
 randomness = 0.2
+collision_base_size = 0.2
 process_material = ExtResource("2_1u3lj")
