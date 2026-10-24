@@ -60,6 +60,7 @@ sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"new_animation_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightThruster" unique_id=920979494]
+visible = false
 position = Vector2(25, 72.25)
 shape = SubResource("RectangleShape2D_uqtu4")
 
@@ -73,6 +74,7 @@ sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftThruster" unique_id=1520196881]
+visible = false
 position = Vector2(-25.5, 72.25)
 shape = SubResource("RectangleShape2D_uqtu4")
 
@@ -86,17 +88,20 @@ sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"new_animation_2"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="MainThruster" unique_id=525219893]
+visible = false
 z_index = 1
 position = Vector2(0, 43.5)
 shape = SubResource("RectangleShape2D_4ai5g")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="MainThruster" unique_id=2006822883]
+visible = false
 z_index = 1
 position = Vector2(0, -68)
 shape = SubResource("RectangleShape2D_w64c8")
 
 [node name="FireParticles" parent="MainThruster" unique_id=93712920 instance=ExtResource("2_kvp10")]
 position = Vector2(-9, 122)
+rotation = 0.0012756091
 
 [node name="FireParticles2" parent="MainThruster" unique_id=1256677696 instance=ExtResource("2_kvp10")]
 position = Vector2(7, 123)

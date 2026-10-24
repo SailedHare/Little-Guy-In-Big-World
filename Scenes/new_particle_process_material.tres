@@ -8,13 +8,15 @@ colors = PackedColorArray(1, 1, 1, 1, 0.69757766, 0.6975776, 0.6975776, 0.419607
 gradient = SubResource("Gradient_1u3lj")
 
 [sub_resource type="Curve" id="Curve_j0xkv"]
-_data = [Vector2(0, 0.61269844), 0.0, 0.0, 0, 0, Vector2(0.23850575, 1), 0.0, 0.0, 0, 0, Vector2(0.9022988, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.24444449), 0.0, 0.0, 0, 0]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 1.0222223), 0.0, 0.0, 0, 0, Vector2(0.3591954, 2), 0.0, 0.0, 0, 0, Vector2(0.8304597, 2), 0.0, 0.0, 0, 0, Vector2(1, 1.5365081), 0.0, 0.0, 0, 0]
 point_count = 4
 
 [sub_resource type="CurveTexture" id="CurveTexture_4ai5g"]
 curve = SubResource("Curve_j0xkv")
 
 [resource]
+lifetime_randomness = 0.13
 particle_flag_align_y = true
 particle_flag_disable_z = true
 emission_shape_scale = Vector3(5, 1, 1)

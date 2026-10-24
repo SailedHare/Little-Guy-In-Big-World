@@ -11,7 +11,7 @@ particles_anim_loop = false
 
 [node name="FireParticles" type="GPUParticles2D" unique_id=1806650781]
 material = SubResource("CanvasItemMaterial_uqtu4")
-amount = 1000
+amount = 200
 texture = ExtResource("1_dobhm")
 lifetime = 1.88
 randomness = 0.2
