@@ -1,6 +1,8 @@
 extends CharacterBody2D
 @onready var ui: CanvasLayer = %UI
 
+var inventory = []
+
 var max_speed = 100
 var acceleration = 100
 var direction

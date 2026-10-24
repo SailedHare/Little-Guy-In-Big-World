@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cysfd0e86px5r"]
 
+[ext_resource type="Script" uid="uid://bu1ttt6p07ywo" path="res://Scripts/rocket.gd" id="1_n4fq7"]
 [ext_resource type="Texture2D" uid="uid://c7nvstt03xdy6" path="res://Assets/RocketShip.png" id="1_wrv6b"]
 [ext_resource type="PackedScene" uid="uid://cn8ijumbw82aa" path="res://Scenes/fire_particles.tscn" id="2_kvp10"]
+[ext_resource type="Texture2D" uid="uid://be8khibwpa0ao" path="res://Assets/LaunchStabilizer.png" id="4_qcqlf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvp10"]
 atlas = ExtResource("1_wrv6b")
@@ -52,49 +54,53 @@ size = Vector2(32, 165)
 size = Vector2(20, 58)
 
 [node name="Rocket" type="Node2D" unique_id=916546206]
+script = ExtResource("1_n4fq7")
 
 [node name="RightThruster" type="RigidBody2D" parent="." unique_id=354176519]
+freeze = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RightThruster" unique_id=413434980]
 sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"new_animation_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightThruster" unique_id=920979494]
-visible = false
 position = Vector2(25, 72.25)
 shape = SubResource("RectangleShape2D_uqtu4")
 
-[node name="FireParticles" parent="RightThruster" unique_id=1806650781 instance=ExtResource("2_kvp10")]
-position = Vector2(-25, 122)
+[node name="FireParticles" parent="RightThruster" unique_id=639719693 instance=ExtResource("2_kvp10")]
+position = Vector2(25, 122)
+emitting = false
 
 [node name="LeftThruster" type="RigidBody2D" parent="." unique_id=1309974629]
+freeze = true
+
+[node name="FireParticles" parent="LeftThruster" unique_id=1806650781 instance=ExtResource("2_kvp10")]
+position = Vector2(-25, 122)
+emitting = false
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LeftThruster" unique_id=31920456]
 sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftThruster" unique_id=1520196881]
-visible = false
 position = Vector2(-25.5, 72.25)
 shape = SubResource("RectangleShape2D_uqtu4")
-
-[node name="FireParticles" parent="LeftThruster" unique_id=639719693 instance=ExtResource("2_kvp10")]
-position = Vector2(25, 122)
+disabled = true
 
 [node name="MainThruster" type="RigidBody2D" parent="." unique_id=272304621]
+collision_layer = 0
+freeze = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainThruster" unique_id=1228347809]
 sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"new_animation_2"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="MainThruster" unique_id=525219893]
-visible = false
 z_index = 1
 position = Vector2(0, 43.5)
 shape = SubResource("RectangleShape2D_4ai5g")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="MainThruster" unique_id=2006822883]
-visible = false
 z_index = 1
 position = Vector2(0, -68)
 shape = SubResource("RectangleShape2D_w64c8")
@@ -102,6 +108,12 @@ shape = SubResource("RectangleShape2D_w64c8")
 [node name="FireParticles" parent="MainThruster" unique_id=93712920 instance=ExtResource("2_kvp10")]
 position = Vector2(-9, 122)
 rotation = 0.0012756091
+emitting = false
 
 [node name="FireParticles2" parent="MainThruster" unique_id=1256677696 instance=ExtResource("2_kvp10")]
 position = Vector2(7, 123)
+emitting = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412416008]
+position = Vector2(-46, 67)
+texture = ExtResource("4_qcqlf")

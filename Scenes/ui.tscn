@@ -87,6 +87,7 @@ layer = 2
 script = ExtResource("1_qdvrb")
 
 [node name="Text Box" type="NinePatchRect" parent="." unique_id=161280784]
+visible = false
 offset_left = 197.0
 offset_top = 133.0
 offset_right = 356.4
