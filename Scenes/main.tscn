@@ -9,6 +9,32 @@
 [ext_resource type="PackedScene" uid="uid://bsq3ieeqhtija" path="res://Scenes/dirt.tscn" id="7_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://btl0e8kf43wtc" path="res://Scenes/scrap.tscn" id="9_hptm8"]
 [ext_resource type="PackedScene" uid="uid://cysfd0e86px5r" path="res://Scenes/rocket.tscn" id="9_ynf5e"]
+[ext_resource type="Shader" uid="uid://lghx80rugk55" path="res://Scenes/main.gdshader" id="11_d1ilt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u14ej"]
+shader = ExtResource("11_d1ilt")
+shader_parameter/brightness = 1.5
+shader_parameter/contrast = 1.0
+shader_parameter/saturation = 1.0
+shader_parameter/gamma = 1.05
+shader_parameter/curvature = 0.14
+shader_parameter/corner_soften = 0.06
+shader_parameter/vignette = 0.38
+shader_parameter/scanline_strength = 0.95
+shader_parameter/scanline_density = 1.15
+shader_parameter/interlace_strength = 0.2
+shader_parameter/mask_strength = 0.22
+shader_parameter/mask_scale = 1.0
+shader_parameter/chroma_offset_px = 1.6
+shader_parameter/luma_smear_px = 2.2
+shader_parameter/jitter_px = 1.8
+shader_parameter/wobble_px = 1.5
+shader_parameter/tape_noise = 0.22
+shader_parameter/tape_lines = 0.35
+shader_parameter/roll_speed = 0.1
+shader_parameter/roll_strength = 0.15
+shader_parameter/glow_strength = 0.25
+shader_parameter/glow_threshold = 0.65
 
 [node name="main" type="Node2D" unique_id=949516983]
 
@@ -45,3 +71,14 @@ position = Vector2(266, -138)
 
 [node name="Scrap" parent="." unique_id=954714235 groups=["ScrapMetal"] instance=ExtResource("9_hptm8")]
 position = Vector2(185, -21)
+
+[node name="Shaders" type="CanvasLayer" parent="." unique_id=1050215680]
+layer = 1000
+
+[node name="ColorRect" type="ColorRect" parent="Shaders" unique_id=378198711]
+material = SubResource("ShaderMaterial_u14ej")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

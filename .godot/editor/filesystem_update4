@@ -1,5 +1,8 @@
-res://Scenes/ui.tscn
 res://Scenes/new_particle_process_material.tres
-res://Scripts/ui.gd
-res://Scripts/jerald.gd
+res://Scenes/main.tscn
+res://Assets/crt.gdshader
+res://Scenes/shader.tscn
+res://Scenes/shaders.tscn
+res://Scenes/shaders.gdshader
+res://Scenes/main.gdshader
 res://Scenes/player.gd

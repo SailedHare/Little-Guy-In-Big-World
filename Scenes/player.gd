@@ -14,6 +14,7 @@ const MIN_JUMP_VELOCITY = 50.0
 const MAX_JUMP_VELOCITY = 150.0
 const JUMP_CHARGE_SPEED = 200.0
 
+var max_speed2 = 100
 var facing = 1 # 1 = right, -1 = left
 var gravity = 5
 const gravity_const = 5
@@ -42,7 +43,7 @@ func _physics_process(delta: float) -> void:
 					"Ant":
 						ui.text = not ui.text
 						ui.person = "Ant"
-
+	max_speed = max_speed2
 
 	
 	movement(delta)
@@ -59,7 +60,7 @@ func movement(delta: float) -> void:
 	if ui.text == true:
 		max_speed = 0
 	else:
-		max_speed = 100
+		max_speed = max_speed2
 	direction = Input.get_axis("left", "right")
 	#print($Interact.get_overlapping_bodies())a
 	
@@ -79,18 +80,20 @@ func movement(delta: float) -> void:
 	# Charge while holding jump on the ground
 	if is_on_floor() and Input.is_action_pressed("jump") and ui.text == false:
 		player_sprite.play("Crouch")
+		max_speed2 = 30
 		if jump_velocity < MAX_JUMP_VELOCITY:
 			jump_velocity = min(
 				jump_velocity + JUMP_CHARGE_SPEED * delta,
 				MAX_JUMP_VELOCITY
 			)
-		max_speed = 30
+		
 
 	# Jump when releasing the button
 	elif is_on_floor() and Input.is_action_just_released("jump") and ui.text == false:
 		velocity.y = -jump_velocity
 		jumped = true
-		max_speed = 50
+		max_speed2 = 100
+		max_speed = max_speed2
 
 	elif velocity.x != 0:
 		player_sprite.play("Walk")
