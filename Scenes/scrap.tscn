@@ -2,13 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://du11xan2j41ji" path="res://Assets/Scrap.png" id="1_itaa7"]
 [ext_resource type="Script" uid="uid://dfu76isdvm4sg" path="res://Scripts/scrap.gd" id="1_nkhrt"]
-[ext_resource type="Shader" uid="uid://c4k572g3qvj2m" path="res://Assets/Outline.gdshader" id="2_cu64b"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_e8tn5"]
-shader = ExtResource("2_cu64b")
-shader_parameter/outline_width = 0.0
-shader_parameter/outline_color = Color(1, 1, 1, 1)
-shader_parameter/texture_region = Vector4(0, 0, 0, 0)
+[ext_resource type="Material" uid="uid://cipefi1bv2347" path="res://Assets/new_shader_material.tres" id="2_cu64b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nkhrt"]
 atlas = ExtResource("1_itaa7")
@@ -54,7 +48,7 @@ collision_mask = 15
 script = ExtResource("1_nkhrt")
 
 [node name="ScrapSprite" type="AnimatedSprite2D" parent="." unique_id=1648652556 groups=["ScrapMetal"]]
-material = SubResource("ShaderMaterial_e8tn5")
+material = ExtResource("2_cu64b")
 sprite_frames = SubResource("SpriteFrames_u14ej")
 frame_progress = 0.883078
 

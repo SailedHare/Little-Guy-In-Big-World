@@ -36,19 +36,19 @@ func _process(delta: float) -> void:
 			
 	match parts[0]:
 		true:
-			$LeftThruster.visible = true
+			$LeftThruster/AnimatedSprite2D.modulate.a = 1
 			
 		false:
-			$LeftThruster.visible = false
+			$LeftThruster/AnimatedSprite2D.modulate.a = .5
 	match parts[1]:
 		true:
-			$MainThruster.visible = true
+			$MainThruster/AnimatedSprite2D.modulate.a = 1
 		false:
-			$MainThruster.visible = false
+			$MainThruster/AnimatedSprite2D.modulate.a = .5
 	match parts[2]:
 		true:
-			$RightThruster.visible = true
+			$RightThruster/AnimatedSprite2D.modulate.a = 1
 		false:
-			$RightThruster.visible = false
+			$RightThruster/AnimatedSprite2D.modulate.a = .5
 	#
 	#

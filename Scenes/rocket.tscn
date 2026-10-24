@@ -85,7 +85,6 @@ animation = &"new_animation"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftThruster" unique_id=1520196881]
 position = Vector2(-25.5, 72.25)
 shape = SubResource("RectangleShape2D_uqtu4")
-disabled = true
 
 [node name="MainThruster" type="RigidBody2D" parent="." unique_id=272304621]
 collision_layer = 0
