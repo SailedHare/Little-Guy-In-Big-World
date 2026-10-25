@@ -21,6 +21,8 @@ const gravity_const = 5
 var jumped = false
 
 @onready var player_sprite: AnimatedSprite2D = $PlayerSprite
+@onready var jerald: CharacterBody2D = %Jerald
+
 #@onready var text_box: NinePatchRect = $CanvasLayer/TextBox
 
 
@@ -35,6 +37,10 @@ func _physics_process(delta: float) -> void:
 	if overlapping_bodies.size() > 0:
 		for body in overlapping_bodies:
 			print(body.name)
+			if body.name == "Jerald":
+				jerald.outline = true
+			elif body.name != "Jerald":
+				jerald.outline = false
 			if Input.is_action_just_pressed("interact"):
 				
 				match body.name:
@@ -42,6 +48,7 @@ func _physics_process(delta: float) -> void:
 						ui.text = not ui.text
 						ui.person = "Jerald"
 						body.mode = "Following"
+						
 							
 						#elif body.mode == "Following":
 							#body.mode = "Still"
@@ -49,6 +56,8 @@ func _physics_process(delta: float) -> void:
 					"Ant":
 						ui.text = not ui.text
 						ui.person = "Ant"
+			#elif body.name != "Jerald":
+				#jerald.outline = false
 			if Input.is_action_pressed("interact"):
 				match body.name:
 					"RightThruster":
@@ -63,6 +72,7 @@ func _physics_process(delta: float) -> void:
 						if scraps > 0:
 							body.rocket.scraps[0] -= 1 
 							scraps -= 1 
+			
 
 	max_speed = max_speed2
 

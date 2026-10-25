@@ -61,6 +61,7 @@ unique_name_in_owner = true
 layer = 100
 
 [node name="Jerald" parent="." unique_id=175109271 instance=ExtResource("6_21xkr")]
+unique_name_in_owner = true
 position = Vector2(70, -17)
 
 [node name="Dirt" parent="." unique_id=181538301 instance=ExtResource("7_ynf5e")]

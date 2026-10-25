@@ -10,6 +10,7 @@ var gravity_const = 5
 var facing = 0
 var range = 40
 var mode = "Still"
+var outline = false
 func _physics_process(delta: float) -> void:
 	flipping()
 	distance_to_player = self.global_position - player.global_position
@@ -46,7 +47,13 @@ func _physics_process(delta: float) -> void:
 		#await get_tree().create_timer(10*delta).timeout
 		velocity.y = -140
 		#print(velocity.y)
-
+	match outline:
+		true:
+			enable_outline()
+		false:
+			disable_outline()
+			
+	
 	move_and_slide()
 	
 func flipping():
@@ -60,3 +67,11 @@ func flipping():
 			jerald_sprite.flip_h = false
 		-1:
 			jerald_sprite.flip_h = true
+func enable_outline():
+	var material = $JeraldSprite.material as ShaderMaterial
+	if material:
+		material.set_shader_parameter("outline_width", 1.0)
+func disable_outline():
+	var material = $JeraldSprite.material as ShaderMaterial
+	if material:
+		material.set_shader_parameter("outline_width", 0.0)
