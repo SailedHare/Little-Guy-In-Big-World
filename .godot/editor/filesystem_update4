@@ -13,3 +13,6 @@ res://Scenes/right_thruster.gd
 res://Scenes/player.tscn
 res://Scenes/jerald.tscn
 res://Scripts/jerald.gd
+res://Scenes/shaders.tscn
+res://Scenes/ui.tscn
+res://Scripts/ui.gd

@@ -53,4 +53,14 @@ func _process(delta: float) -> void:
 		false:
 			$RightThruster/AnimatedSprite2D.modulate.a = .5
 	
+	if scraps[0] < 1:
+		parts[0] = true
+		$LeftThruster/AnimatedSprite2D2.visible = false
+	if scraps[1] < 1:
+		parts[1] = true
+		$MainThruster/AnimatedSprite2D2.visible = false
+	if scraps[2] < 1:
+		parts[2] = true
+		$RightThruster/AnimatedSprite2D2.visible = false
+		
 	

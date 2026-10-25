@@ -176,7 +176,7 @@ radius = 5.9999857
 height = 19.999954
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u14ej"]
-radius = 9.0
+radius = 6.0
 
 [node name="Player" type="CharacterBody2D" unique_id=382361107]
 script = ExtResource("1_cvnsp")

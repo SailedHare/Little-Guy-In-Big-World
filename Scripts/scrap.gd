@@ -1,6 +1,6 @@
 extends Area2D
 
-
+var worth = 500
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$ScrapSprite.play("default")
@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 			
 			
 			if body.name == "Player" and Input.is_action_just_pressed("interact"):
-				body.scraps += 3
+				body.scraps += worth
 				self.global_position = self.global_position.move_toward(body.global_position,2 * delta)
 				if body.name == "Player":
 					var shrink = get_tree().create_tween().parallel()
