@@ -34,15 +34,35 @@ func _physics_process(delta: float) -> void:
 	var overlapping_bodies: Array[Node2D] = $Interact.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
 		for body in overlapping_bodies:
-			#print(body.name)
+			print(body.name)
 			if Input.is_action_just_pressed("interact"):
+				
 				match body.name:
 					"Jerald":
 						ui.text = not ui.text
 						ui.person = "Jerald"
+						body.mode = "Following"
+							
+						#elif body.mode == "Following":
+							#body.mode = "Still"
+							
 					"Ant":
 						ui.text = not ui.text
 						ui.person = "Ant"
+			if Input.is_action_pressed("interact"):
+				match body.name:
+					"RightThruster":
+						if scraps > 0:
+							body.rocket.scraps[2] -= 1 
+							scraps -= 1 
+					"MainThruster":
+						if scraps > 0:
+							body.rocket.scraps[1] -= 1 
+							scraps -= 1 
+					"LeftThruster":
+						if scraps > 0:
+							body.rocket.scraps[0] -= 1 
+							scraps -= 1 
 
 	max_speed = max_speed2
 

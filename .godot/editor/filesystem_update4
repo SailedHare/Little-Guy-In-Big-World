@@ -7,3 +7,9 @@ res://Scenes/rocket.tscn
 res://Scripts/rocket.gd
 res://Scripts/scrap.gd
 res://Scenes/player.gd
+res://Scenes/left_thruster.gd
+res://Scenes/main_thruster.gd
+res://Scenes/right_thruster.gd
+res://Scenes/player.tscn
+res://Scenes/jerald.tscn
+res://Scripts/jerald.gd

@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://bu1ttt6p07ywo" path="res://Scripts/rocket.gd" id="1_n4fq7"]
 [ext_resource type="Texture2D" uid="uid://c7nvstt03xdy6" path="res://Assets/RocketShip.png" id="1_wrv6b"]
 [ext_resource type="PackedScene" uid="uid://cn8ijumbw82aa" path="res://Scenes/fire_particles.tscn" id="2_kvp10"]
+[ext_resource type="Script" uid="uid://41qnwurtwqs6" path="res://Scenes/right_thruster.gd" id="2_ls16j"]
 [ext_resource type="Texture2D" uid="uid://be8khibwpa0ao" path="res://Assets/LaunchStabilizer.png" id="4_qcqlf"]
 [ext_resource type="Texture2D" uid="uid://du11xan2j41ji" path="res://Assets/Scrap.png" id="4_vqk18"]
 [ext_resource type="FontFile" uid="uid://csyvcx1g840w8" path="res://Assets/aseprite.ttf" id="5_8pv10"]
+[ext_resource type="Script" uid="uid://nheks672s5bq" path="res://Scenes/left_thruster.gd" id="7_6mlh7"]
+[ext_resource type="Script" uid="uid://pp32gcf0hoya" path="res://Scenes/main_thruster.gd" id="8_4eg6v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvp10"]
 atlas = ExtResource("1_wrv6b")
@@ -96,6 +99,7 @@ script = ExtResource("1_n4fq7")
 
 [node name="RightThruster" type="RigidBody2D" parent="." unique_id=354176519]
 freeze = true
+script = ExtResource("2_ls16j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RightThruster" unique_id=413434980]
 sprite_frames = SubResource("SpriteFrames_u14ej")
@@ -127,6 +131,7 @@ text = "50"
 
 [node name="LeftThruster" type="RigidBody2D" parent="." unique_id=1309974629]
 freeze = true
+script = ExtResource("7_6mlh7")
 
 [node name="FireParticles" parent="LeftThruster" unique_id=1806650781 instance=ExtResource("2_kvp10")]
 position = Vector2(-25, 122)
@@ -160,6 +165,7 @@ text = "50
 [node name="MainThruster" type="RigidBody2D" parent="." unique_id=272304621]
 collision_layer = 0
 freeze = true
+script = ExtResource("8_4eg6v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MainThruster" unique_id=1228347809]
 sprite_frames = SubResource("SpriteFrames_u14ej")

@@ -1,4 +1,5 @@
 extends RigidBody2D
+@onready var rocket: Node2D = $".."
 
 
 # Called when the node enters the scene tree for the first time.

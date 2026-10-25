@@ -14,10 +14,9 @@ func _process(delta: float) -> void:
 			$RightThruster/FireParticles.emitting = true
 			$LeftThruster/FireParticles.emitting = true
 			$MainThruster/FireParticles.emitting = true
-			$LeftThruster/CollisionShape2D.disabled = false
-			$RightThruster/CollisionShape2D.disabled = false
-			$MainThruster/CollisionShape2D2.disabled = false
-			$MainThruster/CollisionShape2D3.disabled = false
+			$LeftThruster.collision_layer = 1
+			$RightThruster.collision_layer = 1
+			$MainThruster.collision_layer = 1
 			$LeftThruster.freeze = false
 			$RightThruster.freeze = false
 			$MainThruster.freeze = false
@@ -26,14 +25,16 @@ func _process(delta: float) -> void:
 			$RightThruster/FireParticles.emitting = false
 			$LeftThruster/FireParticles.emitting = false
 			$MainThruster/FireParticles.emitting = false
-			$LeftThruster/CollisionShape2D.disabled = true
-			$RightThruster/CollisionShape2D.disabled = true
-			$MainThruster/CollisionShape2D2.disabled = true
-			$MainThruster/CollisionShape2D3.disabled = true
+			$LeftThruster.collision_layer = 8
+			$RightThruster.collision_layer = 8
+			$MainThruster.collision_layer = 8
 			$LeftThruster.freeze = true
 			$RightThruster.freeze = true
 			$MainThruster.freeze = true
-
+	$RightThruster/AnimatedSprite2D2/Label.text = str(scraps[2])
+	$LeftThruster/AnimatedSprite2D2/Label.text = str(scraps[0])
+	$MainThruster/AnimatedSprite2D2/Label.text = str(scraps[1])
+	
 			
 	match parts[0]:
 		true:
