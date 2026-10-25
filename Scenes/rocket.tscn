@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c7nvstt03xdy6" path="res://Assets/RocketShip.png" id="1_wrv6b"]
 [ext_resource type="PackedScene" uid="uid://cn8ijumbw82aa" path="res://Scenes/fire_particles.tscn" id="2_kvp10"]
 [ext_resource type="Texture2D" uid="uid://be8khibwpa0ao" path="res://Assets/LaunchStabilizer.png" id="4_qcqlf"]
+[ext_resource type="Texture2D" uid="uid://du11xan2j41ji" path="res://Assets/Scrap.png" id="4_vqk18"]
+[ext_resource type="FontFile" uid="uid://csyvcx1g840w8" path="res://Assets/aseprite.ttf" id="5_8pv10"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kvp10"]
 atlas = ExtResource("1_wrv6b")
@@ -47,6 +49,42 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqtu4"]
 size = Vector2(15, 105.5)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvy4x"]
+atlas = ExtResource("4_vqk18")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ls16j"]
+atlas = ExtResource("4_vqk18")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mlh7"]
+atlas = ExtResource("4_vqk18")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eg6v"]
+atlas = ExtResource("4_vqk18")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uqtu4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvy4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ls16j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mlh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4eg6v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ai5g"]
 size = Vector2(32, 165)
 
@@ -71,6 +109,22 @@ shape = SubResource("RectangleShape2D_uqtu4")
 position = Vector2(25, 122)
 emitting = false
 
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="RightThruster" unique_id=1574333577]
+z_index = 1
+position = Vector2(26, 74)
+sprite_frames = SubResource("SpriteFrames_uqtu4")
+
+[node name="Label" type="Label" parent="RightThruster/AnimatedSprite2D2" unique_id=2037652790]
+z_index = 7
+offset_left = -6.0
+offset_top = 14.0
+offset_right = 34.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_8pv10")
+theme_override_font_sizes/font_size = 7
+text = "50"
+
 [node name="LeftThruster" type="RigidBody2D" parent="." unique_id=1309974629]
 freeze = true
 
@@ -85,6 +139,23 @@ animation = &"new_animation"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftThruster" unique_id=1520196881]
 position = Vector2(-25.5, 72.25)
 shape = SubResource("RectangleShape2D_uqtu4")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="LeftThruster" unique_id=2139063668]
+z_index = 1
+position = Vector2(-26, 74)
+sprite_frames = SubResource("SpriteFrames_uqtu4")
+
+[node name="Label" type="Label" parent="LeftThruster/AnimatedSprite2D2" unique_id=1074117139]
+z_index = 7
+offset_left = -4.0
+offset_top = 15.0
+offset_right = 36.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_8pv10")
+theme_override_font_sizes/font_size = 7
+text = "50
+"
 
 [node name="MainThruster" type="RigidBody2D" parent="." unique_id=272304621]
 collision_layer = 0
@@ -112,6 +183,22 @@ emitting = false
 [node name="FireParticles2" parent="MainThruster" unique_id=1256677696 instance=ExtResource("2_kvp10")]
 position = Vector2(7, 123)
 emitting = false
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="MainThruster" unique_id=1113934249]
+z_index = 1
+position = Vector2(0, 64)
+sprite_frames = SubResource("SpriteFrames_uqtu4")
+
+[node name="Label" type="Label" parent="MainThruster/AnimatedSprite2D2" unique_id=1618795173]
+z_index = 7
+offset_left = -8.0
+offset_top = 14.0
+offset_right = 32.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_8pv10")
+theme_override_font_sizes/font_size = 7
+text = "200"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412416008]
 position = Vector2(-46, 67)

@@ -3,3 +3,7 @@ res://Assets/new_shader_material.tres
 res://Scenes/new_particle_process_material.tres
 res://Scenes/main.gdshader
 res://Assets/Outline.gdshader
+res://Scenes/rocket.tscn
+res://Scripts/rocket.gd
+res://Scripts/scrap.gd
+res://Scenes/player.gd

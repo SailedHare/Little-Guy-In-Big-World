@@ -1,6 +1,7 @@
 extends Node2D
 var launching = false
 var parts = [false,false,false]
+var scraps = [50, 200, 50]
 ## Called when the node enters the scene tree for the first time.
 #func _ready() -> void:
 	#pass # Replace with function body.
@@ -50,5 +51,5 @@ func _process(delta: float) -> void:
 			$RightThruster/AnimatedSprite2D.modulate.a = 1
 		false:
 			$RightThruster/AnimatedSprite2D.modulate.a = .5
-	#
-	#
+	
+	

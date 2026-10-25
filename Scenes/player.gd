@@ -43,6 +43,7 @@ func _physics_process(delta: float) -> void:
 					"Ant":
 						ui.text = not ui.text
 						ui.person = "Ant"
+
 	max_speed = max_speed2
 
 	
