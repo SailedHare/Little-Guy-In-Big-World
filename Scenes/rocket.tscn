@@ -121,9 +121,9 @@ sprite_frames = SubResource("SpriteFrames_uqtu4")
 
 [node name="Label" type="Label" parent="RightThruster/AnimatedSprite2D2" unique_id=2037652790]
 z_index = 1
-offset_left = -21.0
+offset_left = -20.0
 offset_top = 14.0
-offset_right = 19.0
+offset_right = 20.0
 offset_bottom = 37.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
