@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var ui: CanvasLayer = %UI
+@onready var rocket: Node2D = %Rocket
 
 var inventory = []
 
@@ -32,59 +33,76 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	
-	var overlapping_bodies: Array[Node2D] = $Interact.get_overlapping_bodies()
-	if overlapping_bodies.size() > 0:
-		for body in overlapping_bodies:
-			#print(body.name)
-			if body.name == "Jerald":
-				jerald.outline = true
-			elif body.name != "Jerald":
-				jerald.outline = false
-			if Input.is_action_just_pressed("interact"):
-				
-				match body.name:
-					"Jerald":
-						ui.text = not ui.text
-						ui.person = "Jerald"
-						body.mode = "Following"
-						
+	if rocket.launching == false:
+		var overlapping_bodies: Array[Node2D] = $Interact.get_overlapping_bodies()
+		if overlapping_bodies.size() > 0:
+			for body in overlapping_bodies:
+			
+				if body.name == "Jerald":
+					jerald.outline = true
+				elif body.name != "Jerald":
+					jerald.outline = false
+				if Input.is_action_just_pressed("interact"):
+					
+					match body.name:
+						"Jerald":
+							ui.text = not ui.text
+							ui.person = "Jerald"
+							body.mode = "Following"
 							
-						#elif body.mode == "Following":
-							#body.mode = "Still"
-							
-					"Ant":
-						ui.text = not ui.text
-						ui.person = "Ant"
-			#elif body.name != "Jerald":
-				#jerald.outline = false
-			if Input.is_action_pressed("interact"):
-				match body.name:
-					"RightThruster":
-						if scraps > 0 and body.rocket.scraps[2] > 0:
-							body.rocket.scraps[2] -= 1 
-							scraps -= 1 
-					"MainThruster":
-						if scraps > 0 and body.rocket.scraps[1] > 0:
-							body.rocket.scraps[1] -= 1 
-							scraps -= 1 
-					"LeftThruster":
-						if scraps > 0 and body.rocket.scraps[0] > 0:
-							body.rocket.scraps[0] -= 1 
-							scraps -= 1 
+								
+							#elif body.mode == "Following":
+								#body.mode = "Still"
+								
+						"Ant":
+							ui.text = not ui.text
+							ui.person = "Ant"
+						"MainThruster":
+							if body.rocket.parts == [true,true,true]:
+								body.rocket.launching = true
+				#elif body.name != "Jerald":
+					#jerald.outline = false
+				if Input.is_action_pressed("interact"):
+					match body.name:
+						"RightThruster":
+							if scraps > 0 and body.rocket.scraps[2] > 0:
+								body.rocket.scraps[2] -= 1 
+								scraps -= 1 
+						"MainThruster":
+							if scraps > 0 and body.rocket.scraps[1] > 0:
+								body.rocket.scraps[1] -= 1 
+								scraps -= 1 
+						"LeftThruster":
+							if scraps > 0 and body.rocket.scraps[0] > 0:
+								body.rocket.scraps[0] -= 1 
+								scraps -= 1 
 			
 
 	max_speed = max_speed2
 
 	
-	movement(delta)
+	if rocket.launching == false:
+		movement(delta)
+		if not is_on_floor():
+			velocity.y += gravity
+			gravity + 2 * delta
+		elif is_on_floor(): 
+			gravity = gravity_const
+	else:
+		if global_position.y > -2500:
+			self.global_position = rocket.main_thruster.global_position - Vector2(0,20)
+		else:
+			self.global_position.y = -2500
+		print(global_position.y)
+		$PlayerCamera.zoom = Vector2(1,1)
+		$PlayerCollision.disabled = true
+		self.visible = false
+		$PlayerCamera.position = Vector2(0,0) + Vector2(randf_range(-3,3),randf_range(-3,3)) 
+		
+		$PlayerCamera.position_smoothing_enabled = false
 	flipping()
+	
 
-	if not is_on_floor():
-		velocity.y += gravity
-		gravity + 2 * delta
-	elif is_on_floor(): 
-		gravity = gravity_const
 
 
 func movement(delta: float) -> void:
@@ -93,7 +111,7 @@ func movement(delta: float) -> void:
 	else:
 		max_speed = max_speed2
 	direction = Input.get_axis("left", "right")
-	#print($Interact.get_overlapping_bodies())a
+	#
 	
 	if direction:
 		velocity.x = move_toward(

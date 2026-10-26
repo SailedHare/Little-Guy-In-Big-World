@@ -16,7 +16,7 @@ point_count = 4
 curve = SubResource("Curve_j0xkv")
 
 [resource]
-lifetime_randomness = 0.13
+lifetime_randomness = 0.27
 particle_flag_align_y = true
 particle_flag_disable_z = true
 emission_shape_scale = Vector3(5, 1, 1)
@@ -24,9 +24,9 @@ emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 direction = Vector3(0, 1, 0)
 spread = 5.308
-initial_velocity_min = 100.0
-initial_velocity_max = 100.0
-gravity = Vector3(0, 90, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, 0, 0)
 scale_curve = SubResource("CurveTexture_4ai5g")
 color_ramp = SubResource("GradientTexture1D_w64c8")
 anim_speed_min = 0.59999996

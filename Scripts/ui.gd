@@ -52,8 +52,8 @@ func _process(delta: float) -> void:
 			timer -= 2 * delta
 			if timer < 0:
 				ScrapOut()
-			print(timer)
-	print($Scrapcounter.position)
+
+
 func ScrapIn():
 	var leftrighttween = get_tree().create_tween()
 	leftrighttween.set_ease(Tween.EaseType.EASE_IN_OUT)

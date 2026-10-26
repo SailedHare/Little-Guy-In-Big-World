@@ -11,9 +11,11 @@ particles_anim_loop = false
 
 [node name="FireParticles" type="GPUParticles2D" unique_id=1806650781]
 material = SubResource("CanvasItemMaterial_uqtu4")
-amount = 200
+amount = 2000
 texture = ExtResource("1_dobhm")
 lifetime = 1.88
-randomness = 0.2
-collision_base_size = 0.2
+preprocess = 10.0
+randomness = 0.32
+collision_base_size = 0.1
+visibility_rect = Rect2(-203.29922, -192.93878, 406.4266, 460.93848)
 process_material = ExtResource("2_1u3lj")

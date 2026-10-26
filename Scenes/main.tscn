@@ -67,6 +67,7 @@ position = Vector2(70, -17)
 [node name="Dirt" parent="." unique_id=181538301 instance=ExtResource("7_ynf5e")]
 
 [node name="Rocket" parent="." unique_id=916546206 instance=ExtResource("9_ynf5e")]
+unique_name_in_owner = true
 z_index = -3
 position = Vector2(266, -138)
 
@@ -75,6 +76,7 @@ position = Vector2(185, -21)
 
 [node name="Shaders" type="CanvasLayer" parent="." unique_id=1050215680]
 layer = 1000
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Shaders" unique_id=378198711]
 material = SubResource("ShaderMaterial_u14ej")

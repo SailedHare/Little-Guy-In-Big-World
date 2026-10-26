@@ -110,6 +110,7 @@ position = Vector2(25, 72.25)
 shape = SubResource("RectangleShape2D_uqtu4")
 
 [node name="FireParticles" parent="RightThruster" unique_id=639719693 instance=ExtResource("2_kvp10")]
+z_index = -1
 position = Vector2(25, 122)
 emitting = false
 
@@ -134,6 +135,7 @@ freeze = true
 script = ExtResource("7_6mlh7")
 
 [node name="FireParticles" parent="LeftThruster" unique_id=1806650781 instance=ExtResource("2_kvp10")]
+z_index = -1
 position = Vector2(-25, 122)
 emitting = false
 
@@ -182,11 +184,13 @@ position = Vector2(0, -68)
 shape = SubResource("RectangleShape2D_w64c8")
 
 [node name="FireParticles" parent="MainThruster" unique_id=93712920 instance=ExtResource("2_kvp10")]
+z_index = -1
 position = Vector2(-9, 122)
 rotation = 0.0012756091
 emitting = false
 
 [node name="FireParticles2" parent="MainThruster" unique_id=1256677696 instance=ExtResource("2_kvp10")]
+z_index = -1
 position = Vector2(7, 123)
 emitting = false
 

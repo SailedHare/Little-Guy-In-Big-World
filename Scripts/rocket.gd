@@ -2,29 +2,59 @@ extends Node2D
 var launching = false
 var parts = [false,false,false]
 var scraps = [50, 200, 50]
+@onready var main_thruster: RigidBody2D = $MainThruster
+var propulsion = 100
+var main_propulsion = 100
+var stand_pos = Vector2()
+var seperated = false
 ## Called when the node enters the scene tree for the first time.
-#func _ready() -> void:
+func _ready() -> void:
+	stand_pos = $Sprite2D.global_rotation
 	#pass # Replace with function body.
 #
 #
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	match launching:
 		true:
-			$RightThruster/FireParticles.emitting = true
-			$LeftThruster/FireParticles.emitting = true
+			if seperated == false:
+				$RightThruster/FireParticles.emitting = true
+				$LeftThruster/FireParticles.emitting = true
+				$LeftThruster.gravity_scale -= 1 * delta
+				$RightThruster.gravity_scale -= 1 * delta
 			$MainThruster/FireParticles.emitting = true
+			$MainThruster/FireParticles2.emitting = true
 			$LeftThruster.collision_layer = 1
 			$RightThruster.collision_layer = 1
 			$MainThruster.collision_layer = 1
 			$LeftThruster.freeze = false
 			$RightThruster.freeze = false
 			$MainThruster.freeze = false
-
+			$LeftThruster.global_position.y -= propulsion * delta
+			$RightThruster.global_position.y -= propulsion * delta
+			$MainThruster.global_position.y -= main_propulsion * delta
+			$MainThruster.gravity_scale -= 1 * delta
+			propulsion += 10 * delta
+			main_propulsion += 10 * delta
+			
+			await get_tree().create_timer(1500 * delta).timeout
+			seperated = true
+			$LeftThruster.global_position.x -= 20 * delta
+			$RightThruster.global_position.x += 20 * delta
+			$RightThruster.rotation_degrees += 10 * delta
+			$LeftThruster.rotation_degrees -= 10 * delta
+			$RightThruster/FireParticles.emitting = false
+			$LeftThruster/FireParticles.emitting = false
+			$LeftThruster.gravity_scale = .8
+			$RightThruster.gravity_scale = .8
+			propulsion = 0
+			
 		false:
 			$RightThruster/FireParticles.emitting = false
 			$LeftThruster/FireParticles.emitting = false
 			$MainThruster/FireParticles.emitting = false
+			$MainThruster/FireParticles2.emitting = false
 			$LeftThruster.collision_layer = 8
 			$RightThruster.collision_layer = 8
 			$MainThruster.collision_layer = 8
