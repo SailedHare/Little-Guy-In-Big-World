@@ -220,5 +220,5 @@ text = "200"
 horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412416008]
-position = Vector2(-46, 67)
+position = Vector2(-46, 70)
 texture = ExtResource("4_qcqlf")
