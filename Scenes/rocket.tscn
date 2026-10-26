@@ -121,14 +121,16 @@ sprite_frames = SubResource("SpriteFrames_uqtu4")
 
 [node name="Label" type="Label" parent="RightThruster/AnimatedSprite2D2" unique_id=2037652790]
 z_index = 1
-offset_left = -6.0
+offset_left = -21.0
 offset_top = 14.0
-offset_right = 34.0
+offset_right = 19.0
 offset_bottom = 37.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("5_8pv10")
 theme_override_font_sizes/font_size = 7
 text = "50"
+horizontal_alignment = 1
 
 [node name="LeftThruster" type="RigidBody2D" parent="." unique_id=1309974629]
 freeze = true
@@ -154,15 +156,18 @@ sprite_frames = SubResource("SpriteFrames_uqtu4")
 
 [node name="Label" type="Label" parent="LeftThruster/AnimatedSprite2D2" unique_id=1074117139]
 z_index = 1
-offset_left = -4.0
-offset_top = 15.0
-offset_right = 36.0
-offset_bottom = 38.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = -19.0
+offset_top = 14.0
+offset_right = 21.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("5_8pv10")
 theme_override_font_sizes/font_size = 7
 text = "50
 "
+horizontal_alignment = 1
 
 [node name="MainThruster" type="RigidBody2D" parent="." unique_id=272304621]
 collision_layer = 0
@@ -201,14 +206,17 @@ sprite_frames = SubResource("SpriteFrames_uqtu4")
 
 [node name="Label" type="Label" parent="MainThruster/AnimatedSprite2D2" unique_id=1618795173]
 z_index = 1
-offset_left = -8.0
+offset_left = -20.0
 offset_top = 14.0
-offset_right = 32.0
+offset_right = 20.0
 offset_bottom = 37.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("5_8pv10")
 theme_override_font_sizes/font_size = 7
 text = "200"
+horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1412416008]
 position = Vector2(-46, 67)

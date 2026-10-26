@@ -42,8 +42,8 @@ func _process(delta: float) -> void:
 			await get_tree().create_timer(700 * delta).timeout
 			seperated = true
 			
-			$LeftThruster.global_position.x -= 20 * delta
-			$RightThruster.global_position.x += 20 * delta
+			$LeftThruster.global_position.x -= 50 * delta
+			$RightThruster.global_position.x += 50 * delta
 			$RightThruster.rotation_degrees += 10 * delta
 			$LeftThruster.rotation_degrees -= 10 * delta
 			$RightThruster/FireParticles.emitting = false
