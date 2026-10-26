@@ -1,6 +1,8 @@
 extends CharacterBody2D
 @onready var jerald_sprite: AnimatedSprite2D = $JeraldSprite
 @onready var player: CharacterBody2D = %Player
+@onready var rocket: Node2D = %Rocket
+
 var distance_to_player = 0
 var friction = 100
 var max_speed = 50
@@ -29,7 +31,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0 , friction * delta)
 	
 	
-	
+	if rocket.launching == true:
+		self.visible = false
 	if velocity.y < -0.1 :
 		$FireParticles.emitting = true
 	elif velocity.y > 0.3:

@@ -3,9 +3,5 @@ res://Assets/new_shader_material.tres
 res://Scenes/new_particle_process_material.tres
 res://Scenes/main.gdshader
 res://Assets/Outline.gdshader
-res://Scripts/rocket.gd
-res://Scenes/player.gd
-res://Scripts/ui.gd
-res://Scenes/rocket.tscn
-res://Scenes/player.tscn
+res://Scripts/jerald.gd
 res://Scenes/fire_particles.tscn

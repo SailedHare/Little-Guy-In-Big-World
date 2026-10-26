@@ -48,8 +48,8 @@ tile_map_data = PackedByteArray("AAD+/wEAAQAIAAAAAAD//wEAAQAKAAAAAAACAAAAAQAIAAA
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=169357498]
 z_index = -100
-position = Vector2(397.00003, -189.00002)
-scale = Vector2(2.5640624, 0.36166993)
+position = Vector2(403, -1735.0935)
+scale = Vector2(2.5640624, 0.51898605)
 texture = ExtResource("3_8gbba")
 
 [node name="Pod" parent="." unique_id=77036530 instance=ExtResource("4_jjvhh")]
