@@ -5,3 +5,11 @@ res://Scenes/main.gdshader
 res://Assets/Outline.gdshader
 res://Scripts/jerald.gd
 res://Scenes/fire_particles.tscn
+res://Scripts/rocket.gd
+res://Scenes/player.gd
+res://Scenes/rocket.tscn
+res://Scenes/left_thruster.gd
+res://Scenes/main_thruster.gd
+res://Scenes/right_thruster.gd
+res://Scenes/ui.tscn
+res://Scripts/ui.gd

@@ -182,3 +182,47 @@ autowrap_mode = 3
 position = Vector2(33.999996, 35.6)
 sprite_frames = SubResource("SpriteFrames_u14ej")
 animation = &"Ant"
+
+[node name="Control" type="Control" parent="." unique_id=487464159]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Control" unique_id=99546736]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 195.0
+offset_right = 865.0
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("7_smcll")
+theme_override_font_sizes/font_size = 48
+text = "THANKS FOR PLAYING"
+
+[node name="Label" type="Label" parent="Control/Label" unique_id=140852015]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 66.0
+offset_right = 580.0
+offset_bottom = 114.0
+theme_override_fonts/font = ExtResource("7_smcll")
+theme_override_font_sizes/font_size = 36
+text = "CREDITS
+Art Emerson
+Coding Emerson
+"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Control/Label/Label" unique_id=1282566436]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 119.0
+offset_right = 572.0
+offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("7_smcll")
+theme_override_font_sizes/font_size = 24
+text = "Coding avy"
+horizontal_alignment = 1

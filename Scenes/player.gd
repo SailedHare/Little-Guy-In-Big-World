@@ -91,9 +91,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		if global_position.y > -2500:
 			self.global_position = rocket.main_thruster.global_position - Vector2(0,20)
+			
 		else:
 			self.global_position.y = -2500
-		print(global_position.y)
+			await get_tree().create_timer(20*delta).timeout
+			ui.credits = true
+		#print(global_position.y)
 		$PlayerCamera.zoom = Vector2(1,1)
 		$PlayerCollision.disabled = true
 		self.visible = false

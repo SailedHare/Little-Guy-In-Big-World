@@ -15,7 +15,7 @@ func _ready() -> void:
 #
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	$MainThruster.global_rotation_degrees = 0
 	match launching:
 		true:
 			if seperated == false:
@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 				$LeftThruster/FireParticles.emitting = true
 				$LeftThruster.gravity_scale -= 1 * delta
 				$RightThruster.gravity_scale -= 1 * delta
+				propulsion += 10 * delta
 			$MainThruster/FireParticles.emitting = true
 			$MainThruster/FireParticles2.emitting = true
 			$LeftThruster.collision_layer = 1
@@ -35,11 +36,12 @@ func _process(delta: float) -> void:
 			$RightThruster.global_position.y -= propulsion * delta
 			$MainThruster.global_position.y -= main_propulsion * delta
 			$MainThruster.gravity_scale -= 1 * delta
-			propulsion += 10 * delta
+			
 			main_propulsion += 10 * delta
 			
-			await get_tree().create_timer(1500 * delta).timeout
+			await get_tree().create_timer(700 * delta).timeout
 			seperated = true
+			
 			$LeftThruster.global_position.x -= 20 * delta
 			$RightThruster.global_position.x += 20 * delta
 			$RightThruster.rotation_degrees += 10 * delta
@@ -48,7 +50,7 @@ func _process(delta: float) -> void:
 			$LeftThruster/FireParticles.emitting = false
 			$LeftThruster.gravity_scale = .8
 			$RightThruster.gravity_scale = .8
-			propulsion = 0
+			propulsion = - 100
 			
 		false:
 			$RightThruster/FireParticles.emitting = false

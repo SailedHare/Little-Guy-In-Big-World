@@ -2,7 +2,7 @@ extends CanvasLayer
 @onready var text_box: NinePatchRect = $"Text Box"
 @onready var text_label: Label = $"Text Box/Text"
 @onready var player: CharacterBody2D = %Player
-
+var credits = false
 var old_scraps = 0
 var text = false
 var person = ""
@@ -12,10 +12,16 @@ var ant_lines = ["*Squeak*", "*Click* *Click*", "*Chirp*"]
 var different = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Control.modulate.a = 0
 	pass # Replace with function body.
 
 
 func _process(delta: float) -> void:
+	
+	if credits == true:
+		$Control.modulate.a += 1*delta
+	
+	
 	
 	#if text == true and Input.is_action_just_pressed("escape"):
 	if Input.is_action_just_pressed("escape"):
