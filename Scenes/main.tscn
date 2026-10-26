@@ -76,6 +76,7 @@ position = Vector2(185, -21)
 
 [node name="Shaders" type="CanvasLayer" parent="." unique_id=1050215680]
 layer = 1000
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Shaders" unique_id=378198711]
 material = SubResource("ShaderMaterial_u14ej")
